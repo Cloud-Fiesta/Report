@@ -1,0 +1,35 @@
+\documentclass[a4paper]{report}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage[italian]{babel}
+
+
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+			keepaspectratio]{its-cover.pdf}%
+			\vfill
+		}
+	}
+}
+\author{De lazzari, Dellera, Oglietti,\\
+ Murta, Cafasso, Carrieri,\\
+ Zuccarella}
+\title{Report Finale "Laboratorio Integrato"\\
+\large Gruppo 6, Cloud Fiesta}
+\date{\today}
+\makeindex
+
+\begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
+\maketitle
+\tableofcontents
+\chapter{Introduzione}
+\author{Riccardo Oglietti}
+	\section{Esempio}
+		Testo in esempio
+
+\end{document}
