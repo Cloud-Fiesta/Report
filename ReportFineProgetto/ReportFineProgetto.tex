@@ -1,11 +1,21 @@
 \documentclass[a4paper]{report}
 \usepackage{graphicx}
 \usepackage{eso-pic}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=blue,
+	pdftitle={Report Finale "Laboratorio Integrato"},
+	pdfpagemode=FullScreen,
+}
+
 \usepackage[italian]{babel}
 
 
 \newcommand\BackgroundPic{%
-	\put(0,0){%
+	\put(0,0){
 		\parbox[b][\paperheight]{\paperwidth}{%
 			\vfill
 			\centering
@@ -28,9 +38,31 @@
 \maketitle
 \tableofcontents
 \chapter{Introduzione}
-\author{Riccardo Oglietti}
+\author{Riccardo Oglietti} 
 	\section{Il Progetto}
 	Il qui presente report ha lo scopo di illustrare lo svolgimento nella sua interezza lo svolgimento del progetto a
-	opera del gruppo "Cloud Fiesta",
+	opera del gruppo "Cloud Fiesta", il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel Enrico
+	nell'ambito del corso \textit{"Laboratorio Integrato"}.
+
+	Lo scopo del progetto e' quello di realizzare una piattaforma di \emph{e-commerce} per conto di un azienda che si
+	occupa di commercio al dettaglio, il sistema deve essere \emph{scalabile} in maniera da poter limitare i costi a
+	quanto strettamente necessrio e potersi mantenere aderente con le esigenze di crescita aziendale.
+	Inoltre, e' essenziale che la piattaforma possa avere degli \emph{standard di sicurezza elevati}, come ben sappiamo,
+	durante i recenti anni si e' verificata un impennata dei crimini legati alla \textit{Cybersecurity}, con un
+	particolare aumento durante la corrente pandemia da COVID-19, come illustrato
+	\href{https://www.interpol.int/en/News-and-Events/News/2020/INTERPOL-report-shows-alarming-rate-of-cyberattacks-during-COVID-19}{dall'Interpol}.
+	E' quindi fondamentale che un'applicazione che gestisce flussi di denaro sia quindi estremamente solida dal punto di
+	vista della sicurezza informatica.
+
+	Vista la complessita' del progetto, e' stato scelto di realizzarlo tramite Team multidisciplinari, con componenti
+	appartenenti ad due corsi afferenti agli indirizzi di \emph{Cloud Specialist} e \emph{ICT Security Specialist}.
+	All'interno di questi due corsi sono presenti le competenze tecniche atte a svolgere il progetto commissionato,
+	coprendo sia l'area di sicurezza e di architettura della rete interna, che quella di utilizzo delle piattaforme
+	cloud che permettono di assicurare la scalabilita' necessaria all'azienda.
+
+	\section{Il Team}
+	Gli stutenti sono stati divisi in sei differenti gruppi
+
+
 
 \end{document}
