@@ -131,7 +131,7 @@
 		organizzate.
 		
 		La nostra scelta e' quindi ricaduta sulla piattaforma di messaggistica istantanea \emph{Telegram}, grazie alla
-		puntualita' delle opzioni di gestione di una \emph{chat} di gruppo e' possibile \emph{pinnare} messaggi, creare
+		puntualita' delle opzioni di gestione di una \emph{chat} di gruppo e' possibile \emph{fissare} messaggi, creare
 		sondaggi e inviare file di grandi dimensioni. Grazie a recenti aggiornamenti e' inoltre possibile effettuare
 		videochiamate e condividere eventualmente il proprio desktop, una feature essenziale nel campo del lavoro
 		collaborativo.
@@ -194,7 +194,30 @@
 			di \emph{MySQL} fino alle ultime versioni stabili. 
 	\section{Architettura di rete}
 		L'architettura di rete scelta e' formata dai seguenti elementi:
+		\begin{enumerate}
+			\item Virtual Machine Ubuntu 20.04 LTS
+		\end{enumerate}
 	\section{Organizzazione container}
+		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
+		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche offre numerosi vantaggi rispetto
+		alla piu' "classica" architettura basata sull'utlizzo di macchine virtuali dedicate. In particolare, una
+		macchina e' in grado di gestire diversi \emph{container} diversi, ottimizzando al meglio le risorse
+		\emph{hardware} a disposizione. Inoltre, il parziale isolamento di un \emph{container} rispetto alla macchina
+		\emph{host} rende l'infrastruttura piu' sicura, in quanto compromettere un singolo applicativo non mette a
+		rischio il resto dell'infrastruttura o degli altri servizi che condividono le medesime risorse.
+		%perhaps, non so se lasciarlo o meno
+		Infine e' importante sottolineare che, grazie ad alcuni moderni \emph{software} di orchestrazione, come ad
+		esempio \emph{Docker swarm}, e' possibile gestire in maniera estremamente puntuale l'eventuale ridondanza dei
+		servizi e la loro posizione fisica all'interno del \emph{cluster} di macchine virtuali.
+		In questo modo e' possibile rendere un infrastruttura estrememanete resiliente, e' inoltre possibile
+		effettuare operazioni di manutenzione con un impatto minimo sull'utente finale.
+
+		Per implementare la nostra infrastruttura, abbiamo deciso di utilizzare i seguenti \emph{container}:
+		\begin{itemize}
+			\item nopCommerce
+			\item MySQL
+		\end{itemize}
+
 \chapter{Processo di implementazione}
 	\section{Implementazione locale}
 	\section{Implementazione remota}
