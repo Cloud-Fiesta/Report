@@ -26,8 +26,7 @@
 	}
 }
 \author{De lazzari, Dellera, Oglietti,\\
- Murta, Cafasso, Carrieri,\\
- Zuccarella}
+ Murta, Cafasso, Carrieri}
 \title{Report Finale "Laboratorio Integrato"\\
 \large Gruppo 6, Cloud Fiesta}
 \date{\today}
@@ -74,7 +73,6 @@
 		\item \textbf{Dellera Lorenzo}
 		\item \textbf{Murta Alessio}
 		\item \textbf{Oglietti Riccardo}
-		\item \textbf{Zuccarella Andrea}
 	\end{itemize}
 	Suddivisi rispettivamente all'interno dei due corsi come da tabella:
 	\begin{center}
@@ -92,6 +90,8 @@
 	e di e di \emph{Co-Team Leader}, essi sono stati rispettivamente assegnati a \emph{Oglietti Riccardo} e \emph{Murta
 	Alessio}. Abbiamo optato per assegnare queste due cariche ripartendole tra i due differenti corsi che compongono il
 	gruppo in maniera da manternere un buon livello di equita' e rappresentanza per entrambe le anime del team.
+	Da notare infine come lo studente "Zuccarella Andrea" si e' presentato a un singolo incontro durante la stesura
+	dell'intero progetto, e non ha effettivamente contribuito in alcuna maniera allo svolgimento dello stesso.
 
 \chapter{Strumenti tecnico-organizzativi}
 \author{Oglietti Riccardo}
@@ -188,15 +188,51 @@
 
 			Nato nel 2008, sviluppo e supporto non si sono mai interrotti, l'ampia \emph{community} che lo mantiene
 			e lo sviluppa permette inoltre una facile risoluzione di eventuali problemi grazie all'ampia
-			\href{https://docs.nopcommerce.com/en/developer/index.html?utm_source=github&utm_medium=referral&utm_campaign=documentation&utm_content=text}{documentazione}
+			\href{https://docs.nopcommerce.com/en/developer/index.html?utm\_source=github&utm\_medium=referral&utm\_campaign=documentation&utm\_content=text}{documentazione}
 			prodotta nel corso degli anni. Questo prodotto abbraccia le moderne tecnologie in ambito di sviluppo web e
 			di sicurezza grazie al massiccio utilizzo di \emph{ASP.NET Core 5} e all'utilizzo come database predefinito
 			di \emph{MySQL} fino alle ultime versioni stabili. 
 	\section{Architettura di rete}
-		L'architettura di rete scelta e' formata dai seguenti elementi:
-		\begin{enumerate}
-			\item Virtual Machine Ubuntu 20.04 LTS
-		\end{enumerate}
+		L'architettura di rete scelta e' basata sull'utilizzo di una singola macchina virtuale in \emph{cloud} sulla
+		sopracitata piattaforma \emph{MS Azure}.
+
+		La macchina virtuale monta un sistema operativo \emph{GNU/Linux Ubuntu Server 20.04 LTS}, e ha le seguenti
+		caratteristiche:
+		\begin{center}
+			\begin{tabular}{c|c}
+				Informazione & Metrica \\
+				\hline
+				Tipologia & Standard\_D2s\_v3 \\
+				CPU & 2 \\
+				RAM & 8 GB \\
+				Disco & 30 GB SSD Premium con ridondanza locale \\
+				Sicurezza & Standard \\
+			\end{tabular}
+		\end{center}
+
+		Al suo interno sono poi presenti alcuni elementi aggiuntivi, che compongono la vera e propria infrastruttura.
+
+		Innanzitutto e' presente \emph{Docker}, si tratta del piu' diffuso orchestratore di \emph{container} diffuso
+		sul mercato. I \emph{container} sono "entita'" che al loro interno contengono un ambiente minimale con tutte le
+		componenti necessarie a un applicativo per svolgere il suo funzionamento, comprese tutte le dipendenze di ognuna
+		delle sue parti. Questa entita' si interfaccia poi con il \emph{Docker Engine}, un software che si occupa di
+		tradurre le richieste del container in chiamate al sistema operativo sottostante, in questo caso una
+		distribuzione di \emph{Ubuntu GNU/Linux}.
+
+		Da sottolineare poi la fondamentale presenza di \emph{SSH}. Si tratta dell'implementazione dell'omonimo 
+		protocollo di connessione remota per sistemi operativi \emph{UNIX like}. Esso permette di effettuare una
+		connessione remota con una macchina tramite una coppia di credenziali oppure una chiave \emph{RSA}, criptando
+		il traffico in maniera da mantenere la riservatezza della comunicazione.
+
+		Infine, gli ultimi due applicativi che e' opportuno segnalare come parti fondamentali della topografia di rete
+		sono \emph{Uncomplicated FireWall} e \emph{Fail2Ban}. Il primo, come intuibile dal nome, e' un \emph{Firewall}
+		atto a limitare le connessioni non autorizzate verso la macchina per il quale e' configurato. In particolare,
+		questo firewall e' in realta' un \emph{frontend} semplificato per \emph{IP Tables}, probabilmente il piu'
+		utilizzato firewall in ambiente \emph{GNU/Linux}.
+		Anche \emph{Fail2Ban} si occupa di una funzione simile, in quanto la sua funzione prinicpale all'interno dell'
+		architettura proposta e' quella di regolamentare e limitare l'accesso alle connessioni \emph{SSH} per i soggetti
+		non autorizzati.
+ 
 	\section{Organizzazione container}
 		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
 		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche offre numerosi vantaggi rispetto
@@ -205,7 +241,7 @@
 		\emph{hardware} a disposizione. Inoltre, il parziale isolamento di un \emph{container} rispetto alla macchina
 		\emph{host} rende l'infrastruttura piu' sicura, in quanto compromettere un singolo applicativo non mette a
 		rischio il resto dell'infrastruttura o degli altri servizi che condividono le medesime risorse.
-		%perhaps, non so se lasciarlo o meno
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%perhaps, non so se lasciarlo o meno
 		Infine e' importante sottolineare che, grazie ad alcuni moderni \emph{software} di orchestrazione, come ad
 		esempio \emph{Docker swarm}, e' possibile gestire in maniera estremamente puntuale l'eventuale ridondanza dei
 		servizi e la loro posizione fisica all'interno del \emph{cluster} di macchine virtuali.
@@ -217,6 +253,24 @@
 			\item nopCommerce
 			\item MySQL
 		\end{itemize}
+		Il primo denominato come \emph{nopCommerce} contiene l'effettiva struttura dello \emph{store online}, compreso
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ocio alla porta%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		di tutte le componenti atte a pubblicare le pagine \emph{web} sulla porta \texttt{8080}, tra cui i \emph{CSS} e
+		il \emph{backend} scritto in \emph{ASP.NET}.
+		
+		Il secondo \emph{contaier} invece, contiene un database \emph{MySQL} che si occupera' di contenere tutte le
+		informazioni riguardanti i prodotti, ecco alcuni dei campi presenti all'interno del \emph{database}
+		\begin{enumerate}
+			\item ProductId
+			\item ProductType
+			\item Name
+			\item FullDescription
+			\item Vendor
+		\end{enumerate}
+
+		I \emph{container} sono configurati in maneira da utilizzare due porte per la comunicazione, esse sono la porta
+		\texttt{80} e la porta \texttt{3306}. Rispettivamente usate per permettere al \emph{container} contenente
+		\emph{nopCommerce} di essere esposto verso internet, e sempre al medesimo di effettuare le comunicazioni con il database \emph{MySQL}.
 
 \chapter{Processo di implementazione}
 	\section{Implementazione locale}
