@@ -85,20 +85,20 @@
 			Zuccarella & \\
 		\end{tabular}
 	\end{center}
-	Come consigliato dai docenti, abbiamo assegnato alcuni \emph{ruoli} in grado di aiutarci con l'organizzazione delle
-	mansioni e in genere della gestione del progetto, in particolare abbiamo individuato il ruolo di \emph{Team Leader}
-	e di e di \emph{Co-Team Leader}, essi sono stati rispettivamente assegnati a \emph{Oglietti Riccardo} e \emph{Murta
-	Alessio}. Abbiamo optato per assegnare queste due cariche ripartendole tra i due differenti corsi che compongono il
-	gruppo in maniera da manternere un buon livello di equita' e rappresentanza per entrambe le anime del team.
-	Da notare infine come lo studente "Zuccarella Andrea" si e' presentato a un singolo incontro durante la stesura
-	dell'intero progetto, e non ha effettivamente contribuito in alcuna maniera allo svolgimento dello stesso.
+	Come consigliato dai docenti, sono stati assegnati alcuni \emph{ruoli} in grado di aiutarci con l'organizzazione
+	delle mansioni e in genere della gestione del progetto, in particolare abbiamo individuato il ruolo di \emph{Team
+	Leader} e di e di \emph{Co-Team Leader}, essi sono stati rispettivamente assegnati a \emph{Oglietti Riccardo} e
+	\emph{Murta Alessio}. Abbiamo optato per assegnare queste due cariche ripartendole tra i due differenti corsi che
+	compongono il gruppo in maniera da manternere un buon livello di equita' e rappresentanza per entrambe le anime del
+	team.  Da notare infine come lo studente "Zuccarella Andrea" si e' presentato a un singolo incontro durante la
+	stesura dell'intero progetto, e non ha effettivamente contribuito in alcuna maniera allo svolgimento dello stesso.
 
 \chapter{Strumenti tecnico-organizzativi}
-\author{Oglietti Riccardo}
+%\author{Oglietti Riccardo} mettere tutti gli autori?
 	\section{GANTT e cronoprogramma}
-	Innanzitutto parlando di strumenti tecnico-organizzativi non possiamo che iniziare descrivendo il "\emph{GANTT}.
-	Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia entrata che permette di
-	assegnare alcuni \emph{task} ritenuti fondamentali a un membro e un momento nel quale realizzarlo.
+	Innanzitutto parlando di strumenti tecnico-organizzativi non e' possibile iniziare senza descrivere il
+	"\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia entrata
+	che permette di assegnare alcuni \emph{task} ritenuti fondamentali a un membro e un momento nel quale realizzarlo.
 
 	Ecco una lista riassuntiva dei processi e degli \emph{step} fondamentali che abbiamo individuato al fine della
 	realizzazione ottimale del progetto, divisi in base al corso di afferenza dei destinatari:
@@ -130,19 +130,19 @@
 		efficente e inclusiva possibile, senza quindi escludere membri o affidarsi a piattaforme troppo lente o non
 		organizzate.
 		
-		La nostra scelta e' quindi ricaduta sulla piattaforma di messaggistica istantanea \emph{Telegram}, grazie alla
+		La scelta e' quindi ricaduta sulla piattaforma di messaggistica istantanea \emph{Telegram}, grazie alla
 		puntualita' delle opzioni di gestione di una \emph{chat} di gruppo e' possibile \emph{fissare} messaggi, creare
 		sondaggi e inviare file di grandi dimensioni. Grazie a recenti aggiornamenti e' inoltre possibile effettuare
 		videochiamate e condividere eventualmente il proprio desktop, una feature essenziale nel campo del lavoro
 		collaborativo.
 	\section{Organizzazione codice}
-		Data la forte componente di scrittura software presente all'interno del progetto, abbiamo optato per l'utlizzo
+		Data la forte componente di scrittura software presente all'interno del progetto, si e' propenso per l'utlizzo
 		di una piattaforma di sviluppo collaborativo, in maniera da organizzare la stesura del codice nella maniera piu'
 		semplice ed esaustiva possibile. In particolare ci siamo affidati al software \emph{GIT} a opera di \emph{Linus
 		Torvalds}, creando un organizzazione sulla popolare piattaforma di proprieta' \emph{Microsoft}, \emph{GitHub}.
 
 		Sulla piattaforma ci siamo quindi premurati di creare immediatamente tre \emph{repository} atti a contenere il
-		lavoro da noi prodotto, in particolare essi sono:
+		lavoro prodotto dal gruppo, in particolare essi sono:
 		\begin{enumerate}
 			\item Random\_Script\label{item:Script}
 			\item Report\label{item:Report}
@@ -151,8 +151,7 @@
 
 		Il repository numero \ref{item:Script}{, \emph{Random\_Script}} e' atto al contenimento di una serie di
 		programmi di piccola entita', come il \emph{parser} che si e' occupato di scaricare le immagini dei prodotti da
-		aggiungere successivamente al database dello store, o i \emph{Dockerfile} che serviranno per \emph{Deployare}
-		l'infrastruttura in ambiente di produzione.
+		aggiungere successivamente al database dello store, o i \emph{Dockerfile} che serviranno per effettuare l'operazione di \emph{deploy} sull'infrastruttura in ambiente di produzione.
 
 		Per quanto riguarda \emph{Report}, ossia il numero \ref{item:Report}, si tratta dello spazio atto alla creazione
 		del report finale, esso e' stato redatto tramite l'utilizzo del linguaggio \LaTeX{}, argomento che sara'
@@ -273,7 +272,55 @@
 		\emph{nopCommerce} di essere esposto verso internet, e sempre al medesimo di effettuare le comunicazioni con il database \emph{MySQL}.
 
 \chapter{Processo di implementazione}
+	Per gestire al meglio le tempistiche e la messa a terra del progetto abbiamo strutturato un processo diviso in fasi,
+	esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il carico
+	di lavoro in maniera coerente. In particolare possiamo individuare tre principali fasi, elencate di seguito;
+	\begin{enumerate}
+		\item Brainstorming e ricerca
+		\item Prototipazione e scripting
+		\item Implementazione locale
+		\item Implementazione remota
+		\item Test di sicurezza
+	\end{enumerate}
+	Ognuna di queste fasi del lavoro ha occupato un diverso ruolo e ha necessitato sforzi di natura diversa, ecco dunque
+	presentata una breve sintesi di quanto accaduto in ognuna di esse.
+	\section{Brainstorming e ricerca}
+		Durante la prima parte del progetto, il gruppo si e' dedicato all'individuazione degli strumenti precedentemente
+		citati atti all'implementazione di quanto richiesto. Questo iniziale sforzo e' stato portato avanti
+		contemporanemente da tutti i membri del gruppo, mentre i membri afferenti al corso di \emph{Cloud Specialist} si
+		sono occupati di effettuare le necessarie ricerce per quanto riguarda il provider di servizi, i membri di
+		\emph{ICT Security Specialist} si sono occupati di iniziare a definire acluni strumenti atti alla gestione della
+		rete.
+		Durante questa fase iniziale, sono stati inoltre individuati lo strumento atto alla creazione dello \emph{store
+		online} e tutti gli strumenti di comunicazione, organizzazione e videoscrittura.
+	\section{Prototipazione e scripting}
+		La fase successiva si e' rivalta essere molto piu' pratica di quella appena svolta, in quanto il gruppo si e'
+		trovato a dover iniziare a risolvere alcuni problemi pratici, come il \emph{parsing} del file \emph{csv}
+		contenente il \emph{database} iniziale e l'utilizzo di \emph{nopCommerce}.
+
+		La necessita' di agire sul file originale contenente i dati iniziali per popolare il \emph{database} e' nata
+		dalla scelta operata dal team di sicurezza di mantenere una copia delle immagini localmente alla macchina in
+		maniera da ridurre il perimetro di vulnerabilita' dell'infrastruttura. Senza questo passaggio, il
+		\emph{database} conterrebbe collegamenti a risorse esterne, i quali potrebbero essere sfruttati da attori
+		terzi per ottenere accesso o controllo a parti dell'infrasturttura.
+
+		E' quindi stato prodotto uno \emph{script} tramite  il linguaggio \emph{bash} che, partendo da una trascrizione
+		in formato testuale del file originale, possa ottenere le immagini relative ai prodotti conservandone il
+		corretto ordine e il riferimento al prodotto. Questo compito e' stato reso piu' difficile da alcuni problemi di
+		formattazione conentuti all'interno del file originale. Come prima azione, lo \emph{script} si occupa di
+		controllare che tutti gli \emph{URL} siano validi e non nulli, dopodiche procede con l'effettivo scaricamento e
+		indicizzazione delle immagini.
+
+		Durante questa fase sono inoltre state esplorate le varie opzioni per l'implementazione di \emph{nopCommerce},
+		considerando quale sistema operativo e strategia di \emph{deploy} scegliere tra le diverse disponibli.
 	\section{Implementazione locale}
-	\section{Implementazione remota}
+		La fase logicamente successiva ha quindi previsto l'implementazione per intero dello \emph{store} localmente,
+		in maniera da poter evidenziare eventuali criticita' e difficolta' di messa in produzione.
+	\section{Implementazione remota}%aggiungere anche la fase di testing in remoto
+	\section{Test di sicurezza}
+
+\chapter{Penetration testing}
+	\chapter{Le premesse}
+	\chapter{Information gathering}
 
 \end{document}

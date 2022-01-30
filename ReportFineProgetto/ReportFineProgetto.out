@@ -13,5 +13,11 @@
 \BOOKMARK [1][-]{section.3.2}{Architettura di rete}{chapter.3}% 13
 \BOOKMARK [1][-]{section.3.3}{Organizzazione container}{chapter.3}% 14
 \BOOKMARK [0][-]{chapter.4}{Processo di implementazione}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Implementazione locale}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Implementazione remota}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.1}{Brainstorming e ricerca}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Prototipazione e scripting}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Implementazione locale}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Implementazione remota}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.5}{Test di sicurezza}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Penetration testing}{}% 21
+\BOOKMARK [0][-]{chapter.6}{Le premesse}{}% 22
+\BOOKMARK [0][-]{chapter.7}{Information gathering}{}% 23
