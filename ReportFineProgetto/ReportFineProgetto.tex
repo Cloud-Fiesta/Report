@@ -36,9 +36,8 @@
 \AddToShipoutPicture*{\BackgroundPic}
 \maketitle
 \tableofcontents
-\chapter{Introduzione}
-\author{Riccardo Oglietti} 
-	\section{Il Progetto}
+\chapter{Introduzione} \label{introduzione}
+	\section{Il Progetto} \label{il_progetto}
 	Il qui presente report ha lo scopo di illustrare lo svolgimento nella sua interezza lo svolgimento del progetto a
 	opera del gruppo "Cloud Fiesta", il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel Enrico
 	nell'ambito del corso \textit{"Laboratorio Integrato"}.
@@ -63,7 +62,7 @@
 	All'interno di questi due corsi sono presenti le competenze tecniche atte a svolgere il progetto commissionato,
 	coprendo sia l'area di sicurezza e di architettura della rete interna, che quella di utilizzo delle piattaforme
 	cloud che permettono di assicurare la scalabilita' necessaria all'azienda.
-	\section{Il Team}
+	\section{Il Team} \label{il_team}
 	Gli stutenti di entrambi i corsi sono stati divisi in sei differenti gruppi, composti da un totale di otto persone,
 	il nostro gruppo, denominato "\emph{Cloud Fiesta}" e' composto dai seguenti studenti:
 	\begin{itemize}
@@ -95,7 +94,7 @@
 
 \chapter{Strumenti tecnico-organizzativi}
 %\author{Oglietti Riccardo} mettere tutti gli autori?
-	\section{GANTT e cronoprogramma}
+	\section{GANTT e cronoprogramma} \label{gantt_e_cronoprogramma}
 	Innanzitutto parlando di strumenti tecnico-organizzativi non e' possibile iniziare senza descrivere il
 	"\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia entrata
 	che permette di assegnare alcuni \emph{task} ritenuti fondamentali a un membro e un momento nel quale realizzarlo.
@@ -124,7 +123,7 @@
 				\item Stesura report economico
 			\end{enumerate}
 	\end{itemize}
-	\section{Strumenti di comunicazione}
+	\section{Strumenti di comunicazione} \label{strumenti di comunicazione}
 		Durante il primo incontro uno dei principali punti che e' stato chiarito e' quello della \emph{comunicazione}.
 		E' infatti essenziale che in un gruppo di lavoro sia possibile gestire la comunicazione in maniera piu'
 		efficente e inclusiva possibile, senza quindi escludere membri o affidarsi a piattaforme troppo lente o non
@@ -135,7 +134,7 @@
 		sondaggi e inviare file di grandi dimensioni. Grazie a recenti aggiornamenti e' inoltre possibile effettuare
 		videochiamate e condividere eventualmente il proprio desktop, una feature essenziale nel campo del lavoro
 		collaborativo.
-	\section{Organizzazione codice}
+	\section{Organizzazione codice} \label{organizzazione codice}
 		Data la forte componente di scrittura software presente all'interno del progetto, si e' propenso per l'utlizzo
 		di una piattaforma di sviluppo collaborativo, in maniera da organizzare la stesura del codice nella maniera piu'
 		semplice ed esaustiva possibile. In particolare ci siamo affidati al software \emph{GIT} a opera di \emph{Linus
@@ -160,15 +159,15 @@
 		Infine, il \emph{repository} \ref{item:ReportE}, nominato come \emph{Report\_Economy}, e' atto ad accogliere i
 		documenti e gli appunti che permetteranno la stesura di un preventivo attendibile dell'implementazione, come
 		richiesto dai requisiti del progetto.
-	\section{Strumenti di scrittura}
+	\section{Strumenti di scrittura} \label{strumenti_di_scrittura}
 		Come accennato durante la precedente sezione, lo strumento principe che e' stato impiegato per la redazione
 		della relazione di progetto e' stato li linguaggio \LaTeX{}. Si tratta di un linguaggio in grado di produrre un
 		testo correttamente formattato a partire da semicodice, in questo modo viene automatizzata la gestione di alcune
 		importanti caratteristiche del documento finale, come per esempio le immagini, spesso punto di debolezza dei
 		comuni software di videoscrittura.
-\chapter{Componenti e architettura}
-	\section{In generale}
-		\subsection{Microsoft Azure}
+\chapter{Componenti e architettura} \label{componenti_e_architettura}
+	\section{In generale} \label{in_generale}
+		\subsection{Microsoft Azure} \label{microsoft_azure}
 			Per descrivere l'architettura da noi ideata riteniamo importante descrivere il \emph{provider} al quale
 			abbiamo deciso di appoggiarci. La scelta e' ricaduta sullo strumento "\emph{Microsoft Azure}", si tratta
 			di un servizio di \emph{Cloud Computing} offerto da \emph{Microsoft}, in particolare esso offre servizi di
@@ -177,7 +176,7 @@
 			parte di un gruppo organizzato, inoltre , \emph{Microsoft} offre un bonus gratuito di credito da spendere
 			sulla piattaforma per ogni persona che vi si registri come studente. Cio' in concomitanza con i prezzi in
 			linea con il mercato, ci ha permesso di sperimentare senza rischiare di dilapidare denaro.
-		\subsection{nopCommerce}
+		\subsection{nopCommerce} \label{nopcommerce}
 			Durante la nostra ricerca di una soluzione che ci permettesse di creare uno \emph{store online} ci siamo
 			imbattuti in \emph{nopCommerce}, una tecnologia a opera di \emph{nopSolutions}. Si tratta di una soluzione
 			\href{https://github.com/nopSolutions/nopCommerce/blob/develop/LICENSE.md}{\emph{libre}} e
@@ -191,7 +190,7 @@
 			prodotta nel corso degli anni. Questo prodotto abbraccia le moderne tecnologie in ambito di sviluppo web e
 			di sicurezza grazie al massiccio utilizzo di \emph{ASP.NET Core 5} e all'utilizzo come database predefinito
 			di \emph{MySQL} fino alle ultime versioni stabili. 
-	\section{Architettura di rete}
+	\section{Architettura di rete} \label{architettura_di_rete}
 		L'architettura di rete scelta e' basata sull'utilizzo di una singola macchina virtuale in \emph{cloud} sulla
 		sopracitata piattaforma \emph{MS Azure}.
 
@@ -218,10 +217,10 @@
 		tradurre le richieste del container in chiamate al sistema operativo sottostante, in questo caso una
 		distribuzione di \emph{Ubuntu GNU/Linux}.
 
-		Da sottolineare poi la fondamentale presenza di \emph{SSH}. Si tratta dell'implementazione dell'omonimo 
-		protocollo di connessione remota per sistemi operativi \emph{UNIX like}. Esso permette di effettuare una
-		connessione remota con una macchina tramite una coppia di credenziali oppure una chiave \emph{RSA}, criptando
-		il traffico in maniera da mantenere la riservatezza della comunicazione.
+		Da sottolineare poi la fondamentale presenza di \emph{SSH} \label{SSH}.  Si tratta dell'implementazione
+		dell'omonimo protocollo di connessione remota per sistemi operativi \emph{UNIX like}. Esso permette di
+		effettuare una connessione remota con una macchina tramite una coppia di credenziali oppure una chiave
+		\emph{RSA}, criptando il traffico in maniera da mantenere la riservatezza della comunicazione.
 
 		Infine, gli ultimi due applicativi che e' opportuno segnalare come parti fondamentali della topografia di rete
 		sono \emph{Uncomplicated FireWall} e \emph{Fail2Ban}. Il primo, come intuibile dal nome, e' un \emph{Firewall}
@@ -232,7 +231,7 @@
 		architettura proposta e' quella di regolamentare e limitare l'accesso alle connessioni \emph{SSH} per i soggetti
 		non autorizzati.
  
-	\section{Organizzazione container}
+	\section{Organizzazione container} \label{organizzazione_container}
 		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
 		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche offre numerosi vantaggi rispetto
 		alla piu' "classica" architettura basata sull'utlizzo di macchine virtuali dedicate. In particolare, una
@@ -271,7 +270,7 @@
 		\texttt{80} e la porta \texttt{3306}. Rispettivamente usate per permettere al \emph{container} contenente
 		\emph{nopCommerce} di essere esposto verso internet, e sempre al medesimo di effettuare le comunicazioni con il database \emph{MySQL}.
 
-\chapter{Processo di implementazione}
+\chapter{Processo di implementazione} \label{processo_di_implementazione}
 	Per gestire al meglio le tempistiche e la messa a terra del progetto abbiamo strutturato un processo diviso in fasi,
 	esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il carico
 	di lavoro in maniera coerente. In particolare possiamo individuare tre principali fasi, elencate di seguito;
@@ -284,7 +283,7 @@
 	\end{enumerate}
 	Ognuna di queste fasi del lavoro ha occupato un diverso ruolo e ha necessitato sforzi di natura diversa, ecco dunque
 	presentata una breve sintesi di quanto accaduto in ognuna di esse.
-	\section{Brainstorming e ricerca}
+	\section{Brainstorming e ricerca} \label{brainstorming_e_ricerca}
 		Durante la prima parte del progetto, il gruppo si e' dedicato all'individuazione degli strumenti precedentemente
 		citati atti all'implementazione di quanto richiesto. Questo iniziale sforzo e' stato portato avanti
 		contemporanemente da tutti i membri del gruppo, mentre i membri afferenti al corso di \emph{Cloud Specialist} si
@@ -294,7 +293,7 @@
 		Durante questa fase iniziale, sono stati inoltre individuati lo strumento atto alla creazione dello \emph{store
 		online}, la relativa gesione del \emph{database} e tutti gli strumenti di comunicazione, organizzazione e
 		videoscrittura.
-	\section{Prototipazione e scripting}
+	\section{Prototipazione e scripting} \label{prototipazione_e_scripting}
 		La fase successiva si e' rivalta essere molto piu' pratica di quella appena svolta, in quanto il gruppo si e'
 		trovato a dover iniziare a risolvere alcuni problemi pratici, come il \emph{parsing} del file \emph{csv}
 		contenente il \emph{database} iniziale e l'utilizzo di \emph{nopCommerce}.
@@ -314,7 +313,7 @@
 
 		Durante questa fase sono state esplorate le varie opzioni per l'implementazione di \emph{nopCommerce},
 		considerando quale sistema operativo e strategia di \emph{deploy} scegliere tra le diverse disponibli.
-		\section{Implementazione locale}
+	\section{Implementazione locale} \label{implementazione_locale}
 		La fase logicamente successiva ha quindi previsto l'implementazione per intero dello \emph{store} localmente,
 		in maniera da poter evidenziare eventuali criticita' e difficolta' di messa in produzione. In particolare
 		l'utilizzo del \emph{database} ha inizialmente creato alcune difficolta', al fine di condurre test e
@@ -336,11 +335,27 @@
 		necessaria un'operazione di modifica per adattare file iniziale alle esigenze della piattaforma da noi scelta.
 		Prima di giungere a questa soluzione, sono state riscontrate diverse anomalie, per esempio l'impossibilita' di
 		visualizzare i prodotti ottenuti, o di aggiungerli al "carrello" per terminare l'acquisto.
-	 \section{Implementazione remota}%aggiungere anche la fase di testing in remoto e l'implementazione di payPal
-	\section{Test di sicurezza}
+		Il problema e' stato finalmente risolto tramite l'esportazione dell'intero \emph{database} interno alla
+		piattaforma per comprenderne al meglio la struttura, e poter di conseguenza strutturare il file \emph{CSV} in
+		maniera consona.
+		Una volta utlimata un implementazione completamente funzionante della piattaforma di \emph{e-commerce}
+		localmente, e' iniziata la sperimentazione remota, descritta in maniera piu' completa di seguito.
+	 \section{Implementazione remota} \label{implementazione_remota}
+		%aggiungere anche la fase di testing in remoto e l'implementazione di payPal
+		Durante la fase di implementazione remota, lo scopo del gruppo e' stato quello di ottenere un infrastruttura
+		funzionante e completa, compresa di dati e grossolane misure di sicurezza, da poter poi raffinare fino
+		all'ottenimento del risultato finale.
 
-\chapter{Penetration testing}
-	\chapter{Le premesse}
-	\chapter{Information gathering}
+		Il processo e' partito dalla creazione di una macchina virtuale con le caratteristiche descritte nella sezione
+		\ref{architettura_di_rete}, il gruppo si e' poi cimentato nella gestione degli accessi alla sopracitata
+		macchina, dapprima tentando un approccio basato sulle organizzazioni e i gruppi offerti nell'ambito della
+		piattaforma \emph{Microsoft Azure}, terminando poi con il piu' intuitivo sistema offerto nativamente dal sistema
+		operativo scelto basato sul protocollo \emph{SSH} descritto \ref{SSH}.
+
+	\section{Test di sicurezza} \label{test_di_sicurezza}
+
+\chapter{Penetration testing} \label{penetration_testing}
+	\section{Le premesse} \label{le_premesse}
+	\section{Information gathering} \label{information_gathering}
 
 \end{document}
