@@ -292,7 +292,8 @@
 		\emph{ICT Security Specialist} si sono occupati di iniziare a definire acluni strumenti atti alla gestione della
 		rete.
 		Durante questa fase iniziale, sono stati inoltre individuati lo strumento atto alla creazione dello \emph{store
-		online} e tutti gli strumenti di comunicazione, organizzazione e videoscrittura.
+		online}, la relativa gesione del \emph{database} e tutti gli strumenti di comunicazione, organizzazione e
+		videoscrittura.
 	\section{Prototipazione e scripting}
 		La fase successiva si e' rivalta essere molto piu' pratica di quella appena svolta, in quanto il gruppo si e'
 		trovato a dover iniziare a risolvere alcuni problemi pratici, come il \emph{parsing} del file \emph{csv}
@@ -311,12 +312,31 @@
 		controllare che tutti gli \emph{URL} siano validi e non nulli, dopodiche procede con l'effettivo scaricamento e
 		indicizzazione delle immagini.
 
-		Durante questa fase sono inoltre state esplorate le varie opzioni per l'implementazione di \emph{nopCommerce},
+		Durante questa fase sono state esplorate le varie opzioni per l'implementazione di \emph{nopCommerce},
 		considerando quale sistema operativo e strategia di \emph{deploy} scegliere tra le diverse disponibli.
-	\section{Implementazione locale}
+		\section{Implementazione locale}
 		La fase logicamente successiva ha quindi previsto l'implementazione per intero dello \emph{store} localmente,
-		in maniera da poter evidenziare eventuali criticita' e difficolta' di messa in produzione.
-	\section{Implementazione remota}%aggiungere anche la fase di testing in remoto
+		in maniera da poter evidenziare eventuali criticita' e difficolta' di messa in produzione. In particolare
+		l'utilizzo del \emph{database} ha inizialmente creato alcune difficolta', al fine di condurre test e
+		sperimentazioni e' stato scelto di usare \emph{MySQL} tramite il gruppo di \emph{software} orientato alla
+		programmazione \emph{WEB} \emph{XAMPP}. Si tratta di uno \emph{stack} di \emph{software} comunemente usato
+		all'interno della programmazione \emph{WEB}, l'acronimo simboleggia i \emph{software} conenuti al suo interno,
+		ossia:
+		\begin{center}
+			\begin{tabular}{c|c}
+				X & Cross-Plattform \\
+				A & Apache WEB-server \\
+				M & MySQL \\
+				P & PhP \\
+				P & Pearl \\
+			\end{tabular}
+		\end{center}
+		In particolare, le difficolta' sono state riscontrate nell'importazione del \emph{database}, \emph{nopCommerce}
+		sfrutta una serie di parametri non presenti all'interno del file originariamente fornitoci, e' quindi stata
+		necessaria un'operazione di modifica per adattare file iniziale alle esigenze della piattaforma da noi scelta.
+		Prima di giungere a questa soluzione, sono state riscontrate diverse anomalie, per esempio l'impossibilita' di
+		visualizzare i prodotti ottenuti, o di aggiungerli al "carrello" per terminare l'acquisto.
+	 \section{Implementazione remota}%aggiungere anche la fase di testing in remoto e l'implementazione di payPal
 	\section{Test di sicurezza}
 
 \chapter{Penetration testing}
