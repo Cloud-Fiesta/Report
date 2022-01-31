@@ -240,10 +240,12 @@
 		rischio il resto dell'infrastruttura o degli altri servizi che condividono le medesime risorse.
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%perhaps, non so se lasciarlo o meno
 		Infine e' importante sottolineare che, grazie ad alcuni moderni \emph{software} di orchestrazione, come ad
-		esempio \emph{Docker Compose}, e' possibile gestire in maniera estremamente puntuale l'eventuale ridondanza dei
+		esempio \emph{Docker Swarm}, e' possibile gestire in maniera estremamente puntuale l'eventuale ridondanza dei
 		servizi e la loro posizione fisica all'interno del \emph{cluster} di macchine virtuali.
 		In questo modo e' possibile rendere un infrastruttura estrememanete resiliente, e' inoltre possibile
 		effettuare operazioni di manutenzione con un impatto minimo sull'utente finale.
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		Infine e' importante sottolineare che, grazie all'utilizzo di \emph{Docker Compose},uno strumento per la definizione e l'esecuzione di applicazioni Docker multi-		 contenitore, possiamo utilizzare un singolo comando per creare e avviare tutti i servizi definiti nello yaml.
 
 		Per implementare la nostra infrastruttura, abbiamo deciso di utilizzare i seguenti \emph{container}:
 		\begin{itemize}
