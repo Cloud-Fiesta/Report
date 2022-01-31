@@ -36,8 +36,8 @@
 \AddToShipoutPicture*{\BackgroundPic}
 \maketitle
 \tableofcontents
-\chapter{Introduzione} \label{introduzione}
-	\section{Il Progetto} \label{il_progetto}
+\chapter{Introduzione}\label{introduzione}
+	\section{Il Progetto}\label{il_progetto}
 		Il qui presente report ha lo scopo di illustrare lo svolgimento nella sua interezza lo svolgimento del progetto
 		a opera del gruppo "Cloud Fiesta", il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel
 		Enrico nell'ambito del corso \textit{"Laboratorio Integrato"}.
@@ -357,7 +357,19 @@
 		per poter ottenere visibilita' sulla macchina che avrebbe ospitato l'infrastruttura e infine dell'asegnazione di
 		chiavi di accesso univoche a tutti i membri. E' stato quindi scelto di lasciare la creazione della macchina e di
 		un primo account con privilegi amministrativi a un membro, il quale ha poi condiviso le credenziali necessarie
-		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato po
+		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato poi
+		possibile impostare profili personali per ognuno dei membri del gruppo, dotando ognuno dei minimi privilegi
+		necessari allo svolgimento della sua funzione secondo il principio "\emph{Least Privilege}.
+		Ognuno dei profili utente creati e' dotato di una coppia di chiavi \emph{RSA} generata tramite il comando
+		\texttt{ssh-keygen -b 4048}, che, in congiunzione con le coppie di chiavi delle macchine dei rispettivi membri
+		del gruppo ha permesso di impostare un accesso ai profili utenti tramite chiave univoca. 
+		Grazie a questi scambi di chiavi, e' stato succcessivamente possibile disabilitare l'accesso via \emph{password}
+		a tutti gli utenti, rinforzando notevolmente la sicurezza della macchina e dell'infrastruttura. E' poi stato
+		creato un utente denominato \emph{nopCommerce} abilitato ad utilizzare solamente i comandi indispensabili alla
+		gestione dei container contenenti la piattaforma e il relativo \emph{database}. Questo account e' inoltre privo
+		di chiavi e inibito dallo stabilire connessioni \emph{SSH} in entrata o in uscita tramite l'utilizzo di
+		\emph{policy}, in maniera da renderlo accessibile solamente da un utente all'interno della macchina tramite il
+		comando \texttt{su}, protetto da una \emph{password} notevolmente robusta.
 
 	\section{Test di sicurezza} \label{test_di_sicurezza}
 
