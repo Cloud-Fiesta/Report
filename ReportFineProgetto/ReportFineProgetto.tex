@@ -38,8 +38,7 @@
 \tableofcontents
 \chapter{Introduzione} \label{introduzione}
 	\section{Il Progetto} \label{il_progetto}
-		Il qui presente report ha lo scopo di illustrare lo svolgimento nella sua interezza lo svolgimento del progetto
-		a opera del gruppo "Cloud Fiesta", il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel
+		Il qui presente report ha lo scopo di illustrare lo svolgimento del progetto a opera del gruppo "Cloud Fiesta", 		il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel
 		Enrico nell'ambito del corso \textit{"Laboratorio Integrato"}.
 
 		Lo scopo del progetto e' quello di realizzare una piattaforma di \emph{e-commerce} per conto di un azienda che
@@ -151,7 +150,7 @@
 
 		Il repository numero \ref{item:Script}{, \emph{Random\_Script}} e' atto al contenimento di una serie di
 		programmi di piccola entita', come il \emph{parser} che si e' occupato di scaricare le immagini dei prodotti da
-		aggiungere successivamente al database dello store, o i \emph{Dockerfile} che serviranno per effettuare l'operazione di \emph{deploy} sull'infrastruttura in ambiente di produzione.
+		aggiungere successivamente al database dello store, o il \emph{docker-compose.yml} che servira' per effettuare l'operazione di \emph{deploy} sull'infrastruttura in ambiente di produzione.
 
 		Per quanto riguarda \emph{Report}, ossia il numero \ref{item:Report}, si tratta dello spazio atto alla creazione
 		del report finale, esso e' stato redatto tramite l'utilizzo del linguaggio \LaTeX{}, argomento che sara'
@@ -245,7 +244,10 @@
 		In questo modo e' possibile rendere un infrastruttura estrememanete resiliente, e' inoltre possibile
 		effettuare operazioni di manutenzione con un impatto minimo sull'utente finale.
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		Infine e' importante sottolineare che, grazie all'utilizzo di \emph{Docker Compose},uno strumento per la definizione e l'esecuzione di applicazioni Docker multi-		 contenitore, possiamo utilizzare un singolo comando per creare e avviare tutti i servizi definiti nello yaml.
+		Infine e' importante sottolineare che, grazie all'utilizzo di \emph{Docker Compose},uno strumento per la 
+		definizione e l'esecuzione di applicazioni Docker multi-contenitore, possiamo utilizzare un singolo comando per
+		creare e avviare tutti i container definiti nel file yaml. Non solo, ci permette di definire e collegare in una
+		network logica i container, che interagiranno tra loro come fosserò macchine fisiche. 
 
 		Per implementare la nostra infrastruttura, abbiamo deciso di utilizzare i seguenti \emph{container}:
 		\begin{itemize}
@@ -357,7 +359,16 @@
 		per poter ottenere visibilita' sulla macchina che avrebbe ospitato l'infrastruttura e infine dell'asegnazione di
 		chiavi di accesso univoche a tutti i membri. E' stato quindi scelto di lasciare la creazione della macchina e di
 		un primo account con privilegi amministrativi a un membro, il quale ha poi condiviso le credenziali necessarie
-		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato po
+		alla connessione remota tramite comunicazione criptata.
+		
+		Grazie alla fase di produzione in locale, abbiamo definito una serie di passaggi per rendere piu' agile il 
+		deploy, partendo dall'immagine ufficiale di nopCommerce su Docker Hub, ne abbiamo costruita una personalizzata 
+		inserendoci direttamente i files .jpeg scaricati per i nostri prodotti del catalogo.
+		La nuova immagine è custodita in repository privato di Docker Hub, funzionale solo al nostro progetto.
+		Basterà lanciare il commando docker-compose up, per avere in pochi minuti i nostri due container attivi e
+		mantenuti in esecuzione. 
+		Assieme a due file di configurazione in formato execel questo ci permette di mettere in produzione il nostro 
+		e-commerce in pochi minuti, in maniera indipedente dal provider.
 
 	\section{Test di sicurezza} \label{test_di_sicurezza}
 
