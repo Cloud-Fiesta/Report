@@ -1,16 +1,3 @@
----
-titlepage: true
-titlepage-text-color: "000000"
-titlepage-rule-color: "000000"
-titlepage-rule-height: 1
-title: Readme
-subtitle: Quick guide on how to contribute on the report
-author: Oglietti Riccardo
-lang: it
-papersize: a4
-toc: false
-...
-
 # Content of the repository
 Repository that will contain the final reports documenting the whole activity
 
