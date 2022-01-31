@@ -191,7 +191,7 @@
 			prodotta nel corso degli anni. Questo prodotto abbraccia le moderne tecnologie in ambito di sviluppo web e
 			di sicurezza grazie al massiccio utilizzo di \emph{ASP.NET Core 5} e all'utilizzo come database predefinito
 			di \emph{MySQL} fino alle ultime versioni stabili. 
-	\section{Architettura di rete}\label{architettura_di_rete}
+	\section{Architettura di rete}\label{architettura_di_rete}%Inserire grafichetto della struttura
 		L'architettura di rete scelta e' basata sull'utilizzo di una singola macchina virtuale in \emph{cloud} sulla
 		sopracitata piattaforma \emph{MS Azure}.
 
@@ -231,6 +231,8 @@
 		Anche \emph{Fail2Ban} si occupa di una funzione simile, in quanto la sua funzione prinicpale all'interno dell'
 		architettura proposta e' quella di regolamentare e limitare l'accesso alle connessioni \emph{SSH} per i soggetti
 		non autorizzati.
+
+		In figura una rappresentazione grafica di quanto illustrato.
  
 	\section{Organizzazione container}\label{organizzazione_container}
 		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
@@ -369,7 +371,14 @@
 		gestione dei container contenenti la piattaforma e il relativo \emph{database}. Questo account e' inoltre privo
 		di chiavi e inibito dallo stabilire connessioni \emph{SSH} in entrata o in uscita tramite l'utilizzo di
 		\emph{policy}, in maniera da renderlo accessibile solamente da un utente all'interno della macchina tramite il
-		comando \texttt{su}, protetto da una \emph{password} notevolmente robusta.
+		comando \texttt{su}, protetto da una \emph{password} notevolmente robusta. Una volta terminata la messa in rete
+		della piattaforma di \emph{e-commerce} l'utente \emph{nopCommerce} e' stato ulteriormente limitato tramite
+		l'ipostazione della \emph{shell} \texttt{/sbin/nologin} come interfaccia predefinita dell'utente, in questa
+		maniera, anche se in possesso delle credenziali di accesso di un utente, e' comunque impossibile effettuare il
+		\emph{login} all'\emph{account} \emph{nopCommerce} in quanto esso non ha un effettiva \emph{shell} interattiva
+		con la quale interfacciarsi.
+		Infine, sia tramite l'interfaccia di \emph{Microsoft Azure} sia tramite il \emph{firewall} implementato, sono
+		state definite %policy ecc
 
 	\section{Test di sicurezza}\label{test_di_sicurezza}
 
