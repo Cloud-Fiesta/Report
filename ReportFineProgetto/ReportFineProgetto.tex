@@ -38,91 +38,92 @@
 \tableofcontents
 \chapter{Introduzione} \label{introduzione}
 	\section{Il Progetto} \label{il_progetto}
-	Il qui presente report ha lo scopo di illustrare lo svolgimento nella sua interezza lo svolgimento del progetto a
-	opera del gruppo "Cloud Fiesta", il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel Enrico
-	nell'ambito del corso \textit{"Laboratorio Integrato"}.
-
-	Lo scopo del progetto e' quello di realizzare una piattaforma di \emph{e-commerce} per conto di un azienda che si
-	occupa di commercio al dettaglio, il sistema deve essere \emph{scalabile} in maniera da poter limitare i costi a
-	quanto strettamente necessrio e potersi mantenere aderente con le esigenze di crescita aziendale.
-	Inoltre, e' essenziale che la piattaforma possa avere degli \emph{standard di sicurezza elevati}, come ben sappiamo,
-	durante i recenti anni si e' verificata un impennata dei crimini legati alla \textit{Cybersecurity}, con un
-	particolare aumento durante la corrente pandemia da COVID-19, come illustrato
-	\href{https://www.interpol.int/en/News-and-Events/News/2020/INTERPOL-report-shows-alarming-rate-of-cyberattacks-during-COVID-19}{dall'Interpol}.
-	E' quindi fondamentale che un'applicazione che gestisce flussi di denaro sia quindi estremamente solida dal punto di
-	vista della sicurezza informatica.
-	Una seconda sezione del progetto, prevede che ogni gruppo si occupi di eseguire dei \emph{penetration test} sul
-	gruppo dall'\emph{ID} successivo. Questo per simulare l'ingaggio di un azienda esterna allo scopo di testare la
-	sicurezza di un prodotto prima di rilasciarlo effettivamente sul mercato, uno step di decisiva importanza che
-	permettera' ai componenti di ogni gruppo di sperimentare le proprie conoscenze di sicurezza informatica all'interno
-	di una situazione altamente realistica.
-
-	Vista la complessita' del progetto, e' stato scelto di realizzarlo tramite Team multidisciplinari, con componenti
-	appartenenti ad due corsi afferenti agli indirizzi di \emph{Cloud Specialist} e \emph{ICT Security Specialist}.
-	All'interno di questi due corsi sono presenti le competenze tecniche atte a svolgere il progetto commissionato,
-	coprendo sia l'area di sicurezza e di architettura della rete interna, che quella di utilizzo delle piattaforme
-	cloud che permettono di assicurare la scalabilita' necessaria all'azienda.
+		Il qui presente report ha lo scopo di illustrare lo svolgimento nella sua interezza lo svolgimento del progetto
+		a opera del gruppo "Cloud Fiesta", il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel
+		Enrico nell'ambito del corso \textit{"Laboratorio Integrato"}.
+		
+		Lo scopo del progetto e' quello di realizzare una piattaforma di \emph{e-commerce} per conto di un azienda che
+		si occupa di commercio al dettaglio, il sistema deve essere \emph{scalabile} in maniera da poter limitare i
+		costi a quanto strettamente necessrio e potersi mantenere aderente con le esigenze di crescita aziendale.
+		Inoltre, e' essenziale che la piattaforma possa avere degli \emph{standard di sicurezza elevati}, come ben
+		sappiamo, durante i recenti anni si e' verificata un impennata dei crimini legati alla \textit{Cybersecurity},
+		con un particolare aumento durante la corrente pandemia da COVID-19, come illustrato
+		\href{https://www.interpol.int/en/News-and-Events/News/2020/INTERPOL-report-shows-alarming-rate-of-cyberattacks-during-COVID-19}{dall'Interpol}.
+		E' quindi fondamentale che un'applicazione che gestisce flussi di denaro sia quindi estremamente solida dal
+		punto di vista della sicurezza informatica.  Una seconda sezione del progetto, prevede che ogni gruppo si occupi
+		di eseguire dei \emph{penetration test} sul gruppo dall'\emph{ID} successivo. Questo per simulare l'ingaggio di
+		un azienda esterna allo scopo di testare la sicurezza di un prodotto prima di rilasciarlo effettivamente sul
+		mercato, uno step di decisiva importanza che permettera' ai componenti di ogni gruppo di sperimentare le proprie
+		conoscenze di sicurezza informatica all'interno di una situazione altamente realistica.
+		
+		Vista la complessita' del progetto, e' stato scelto di realizzarlo tramite Team multidisciplinari, con
+		componenti appartenenti ad due corsi afferenti agli indirizzi di \emph{Cloud Specialist} e \emph{ICT Security
+		Specialist}.  All'interno di questi due corsi sono presenti le competenze tecniche atte a svolgere il progetto
+		commissionato, coprendo sia l'area di sicurezza e di architettura della rete interna, che quella di utilizzo
+		delle piattaforme cloud che permettono di assicurare la scalabilita' necessaria all'azienda.
 	\section{Il Team} \label{il_team}
-	Gli stutenti di entrambi i corsi sono stati divisi in sei differenti gruppi, composti da un totale di otto persone,
-	il nostro gruppo, denominato "\emph{Cloud Fiesta}" e' composto dai seguenti studenti:
-	\begin{itemize}
-		\item \textbf{Cafasso Giovanni}
-		\item \textbf{Carrieri Riccardo}
-		\item \textbf{De Lazzari Riccardo}
-		\item \textbf{Dellera Lorenzo}
-		\item \textbf{Murta Alessio}
-		\item \textbf{Oglietti Riccardo}
-	\end{itemize}
-	Suddivisi rispettivamente all'interno dei due corsi come da tabella:
-	\begin{center}
-		\begin{tabular}{c|c}
-			Cloud Specialist & ICT Security Specialist \\
-			\hline
-			Cafasso Giovanni & De Lazzari Riccardo \\
-			Carrieri Riccardo & Dellera Lorenzo \\
-			Murta Alessio & Oglietti Riccardo \\
-			Zuccarella & \\
-		\end{tabular}
-	\end{center}
-	Come consigliato dai docenti, sono stati assegnati alcuni \emph{ruoli} in grado di aiutarci con l'organizzazione
-	delle mansioni e in genere della gestione del progetto, in particolare abbiamo individuato il ruolo di \emph{Team
-	Leader} e di e di \emph{Co-Team Leader}, essi sono stati rispettivamente assegnati a \emph{Oglietti Riccardo} e
-	\emph{Murta Alessio}. Abbiamo optato per assegnare queste due cariche ripartendole tra i due differenti corsi che
-	compongono il gruppo in maniera da manternere un buon livello di equita' e rappresentanza per entrambe le anime del
-	team.  Da notare infine come lo studente "Zuccarella Andrea" si e' presentato a un singolo incontro durante la
-	stesura dell'intero progetto, e non ha effettivamente contribuito in alcuna maniera allo svolgimento dello stesso.
+		Gli stutenti di entrambi i corsi sono stati divisi in sei differenti gruppi, composti da un totale di otto persone,
+		il nostro gruppo, denominato "\emph{Cloud Fiesta}" e' composto dai seguenti studenti:
+		\begin{itemize}
+			\item \textbf{Cafasso Giovanni}
+			\item \textbf{Carrieri Riccardo}
+			\item \textbf{De Lazzari Riccardo}
+			\item \textbf{Dellera Lorenzo}
+			\item \textbf{Murta Alessio}
+			\item \textbf{Oglietti Riccardo}
+		\end{itemize}
+		Suddivisi rispettivamente all'interno dei due corsi come da tabella:
+		\begin{center}
+			\begin{tabular}{c|c}
+				Cloud Specialist & ICT Security Specialist \\
+				\hline
+				Cafasso Giovanni & De Lazzari Riccardo \\
+				Carrieri Riccardo & Dellera Lorenzo \\
+				Murta Alessio & Oglietti Riccardo \\
+				Zuccarella & \\
+			\end{tabular}
+		\end{center}
+		Come consigliato dai docenti, sono stati assegnati alcuni \emph{ruoli} in grado di aiutarci con l'organizzazione
+		delle mansioni e in genere della gestione del progetto, in particolare abbiamo individuato il ruolo di
+		\emph{Team Leader} e di e di \emph{Co-Team Leader}, essi sono stati rispettivamente assegnati a \emph{Oglietti
+		Riccardo} e \emph{Murta Alessio}. Abbiamo optato per assegnare queste due cariche ripartendole tra i due
+		differenti corsi che compongono il gruppo in maniera da manternere un buon livello di equita' e rappresentanza
+		per entrambe le anime del team.  Da notare infine come lo studente "Zuccarella Andrea" si e' presentato a un
+		singolo incontro durante la stesura dell'intero progetto, e non ha effettivamente contribuito in alcuna maniera
+		allo svolgimento dello stesso.
 
 \chapter{Strumenti tecnico-organizzativi}
 %\author{Oglietti Riccardo} mettere tutti gli autori?
 	\section{GANTT e cronoprogramma} \label{gantt_e_cronoprogramma}
-	Innanzitutto parlando di strumenti tecnico-organizzativi non e' possibile iniziare senza descrivere il
-	"\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia entrata
-	che permette di assegnare alcuni \emph{task} ritenuti fondamentali a un membro e un momento nel quale realizzarlo.
-
-	Ecco una lista riassuntiva dei processi e degli \emph{step} fondamentali che abbiamo individuato al fine della
-	realizzazione ottimale del progetto, divisi in base al corso di afferenza dei destinatari:
-	\begin{itemize}
-		\item \begin{enumerate}
-				\item Parsing file CSV
-				\item Definizione struttura di rete
-				\item Deploy infrastruttura
-				\item Test di sicurezza
-				\item Modfica struttura in base alle falle trovate
-				\item Deploy struttura finale
-				\item Stesura report
-			\end{enumerate}
-		\item \begin{enumerate}
-				\item Brainstorming
-				\item Test locali nopCommerce
-				\item Revisione manuale file CSV
-				\item Selezione architettura Cloud
-				\item Installazione locale nopCommerce/ DB su due macchine
-				\item Containerazziazione su distro linux
-				\item Upload su Cloud Provider 
-				\item Calcolo dei prezzi dell'Hosting di tutto il progetto (macchine virtuali, storage, call)
-				\item Stesura report economico
-			\end{enumerate}
-	\end{itemize}
+		Innanzitutto parlando di strumenti tecnico-organizzativi non e' possibile iniziare senza descrivere il
+		"\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia
+		entrata che permette di assegnare alcuni \emph{task} ritenuti fondamentali a un membro e un momento nel quale
+		realizzarlo.
+		
+		Ecco una lista riassuntiva dei processi e degli \emph{step} fondamentali che abbiamo individuato al fine della
+		realizzazione ottimale del progetto, divisi in base al corso di afferenza dei destinatari:
+		\begin{itemize}
+			\item \begin{enumerate}
+					\item Parsing file CSV
+					\item Definizione struttura di rete
+					\item Deploy infrastruttura
+					\item Test di sicurezza
+					\item Modfica struttura in base alle falle trovate
+					\item Deploy struttura finale
+					\item Stesura report
+				\end{enumerate}
+			\item \begin{enumerate}
+					\item Brainstorming
+					\item Test locali nopCommerce
+					\item Revisione manuale file CSV
+					\item Selezione architettura Cloud
+					\item Installazione locale nopCommerce/ DB su due macchine
+					\item Containerazziazione su distro linux
+					\item Upload su Cloud Provider 
+					\item Calcolo dei prezzi dell'Hosting di tutto il progetto (macchine virtuali, storage, call)
+					\item Stesura report economico
+				\end{enumerate}
+		\end{itemize}
 	\section{Strumenti di comunicazione} \label{strumenti di comunicazione}
 		Durante il primo incontro uno dei principali punti che e' stato chiarito e' quello della \emph{comunicazione}.
 		E' infatti essenziale che in un gruppo di lavoro sia possibile gestire la comunicazione in maniera piu'

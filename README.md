@@ -34,9 +34,9 @@ As an example, that's an extract from the report:
 	\chapter{Introduzione}
 	\author{Riccardo Oglietti}
 		\section{Il Progetto}
-		Some text
-		\subsection{Le Persone}
-			Some other text
+			Some text
+			\subsection{Le Persone}
+				Some other text
 
 ## Numbers
 
