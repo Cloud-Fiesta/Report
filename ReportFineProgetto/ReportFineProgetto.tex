@@ -96,7 +96,6 @@
 		maniera allo svolgimento dello stesso.
 
 \chapter{Strumenti tecnico-organizzativi}
-%\author{Oglietti Riccardo} mettere tutti gli autori?
 	\section{GANTT e cronoprogramma}\label{gantt_e_cronoprogramma}
 		Innanzitutto parlando di strumenti tecnico-organizzativi non e' possibile iniziare senza descrivere il
 		\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia
@@ -113,18 +112,21 @@
 					\item Test di sicurezza
 					\item Modfica struttura in base alle falle trovate
 					\item Deploy struttura finale
+					\item Impolementazione certificato SSL
 					\item Stesura report
+					\item Stesura presentazione Powerpoint
 				\end{enumerate}
 			\item \begin{enumerate}
 					\item Brainstorming
 					\item Test locali nopCommerce
 					\item Revisione manuale file CSV
 					\item Selezione architettura Cloud
-					\item Installazione locale nopCommerce/ DB su due macchine
 					\item Containerazziazione su distro linux
+					\item Installazione locale nopCommerce/ DB su due macchine
 					\item Upload su Cloud Provider 
 					\item Calcolo dei prezzi dell'Hosting di tutto il progetto (macchine virtuali, storage, call)
 					\item Stesura report economico
+					\item Gestione permessi utenti azure
 				\end{enumerate}
 		\end{itemize}
 	\section{Strumenti di comunicazione}\label{strumenti di comunicazione}
@@ -278,8 +280,8 @@
 		database \emph{MySQL}.
 
 		\begin{figure}[H]
-		\includegraphics[scale=0.3]{DiagrammaDiRete.jpg}\label{fig:architettura_di_rete}
-		\caption{Infrastruttura di rete}
+			\includegraphics[scale=0.3]{DiagrammaDiRete.jpg}\label{fig:architettura_di_rete}
+			\caption{Infrastruttura di rete}
 		\end{figure}
  
 
@@ -373,10 +375,10 @@
 		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato poi
 		possibile impostare profili personali per ognuno dei membri del gruppo, dotando ognuno dei minimi privilegi
 		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}. In figura
-		sono illustrati i gruppi di appartenenza di ciascun utente.
+		\ref{fig:utenti_e_gruppi} sono illustrati i gruppi di appartenenza di ciascun utente.
 		\begin{figure}[H]
-		\includegraphics[scale=0.5]{UtentiEGruppi.png}\label{fig:groups}
-		\caption Gruppi di afferenza per ogni utente
+			\includegraphics[scale=0.5]{UtentiEGruppi.png}\label{fig:utenti_e_gruppi}
+			\caption Gruppi di afferenza per ogni utente
 		\end{figure}
 		Ognuno dei profili utente creati e' dotato di una coppia di chiavi \emph{RSA} generata tramite il comando
 		\texttt{ssh-keygen -b 4048}, che, in congiunzione con le coppie di chiavi delle macchine dei rispettivi membri
@@ -458,9 +460,9 @@
 			pagine comuni. Filtrando poi le pagine che restituiscono una risposta \emph{http} positiva, ossia i seguenti
 			codici:
 			\begin{itemize}
-				\item \texttt{200 : OK}
-				\item \texttt{301 : Moved Permanently}
-				\item \texttt{203 : Found}
+				\item \texttt{200}: OK
+				\item \texttt{301}: Moved Permanently
+				\item \texttt{203}: Found
 			\end{itemize}
 			
 
@@ -468,4 +470,5 @@
 	\section{Le premesse}\label{le_premesse}
 	\section{Information gathering}\label{information_gathering}
 
+\chapter{Costi }
 \end{document}
