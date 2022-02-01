@@ -18,6 +18,7 @@
 \BOOKMARK [1][-]{section.4.3}{Implementazione locale}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.4}{Implementazione remota}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.5}{Test di sicurezza}{chapter.4}% 20
-\BOOKMARK [0][-]{chapter.5}{Penetration testing}{}% 21
-\BOOKMARK [1][-]{section.5.1}{Le premesse}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.2}{Information gathering}{chapter.5}% 23
+\BOOKMARK [2][-]{subsection.4.5.1}{Analisi del perimetro}{section.4.5}% 21
+\BOOKMARK [0][-]{chapter.5}{Penetration testing}{}% 22
+\BOOKMARK [1][-]{section.5.1}{Le premesse}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.2}{Information gathering}{chapter.5}% 24

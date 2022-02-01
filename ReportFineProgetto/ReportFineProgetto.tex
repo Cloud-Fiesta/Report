@@ -1,5 +1,6 @@
 \documentclass[a4paper]{report}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{eso-pic}
 \usepackage{hyperref}
 \usepackage[italian]{babel}
@@ -25,6 +26,8 @@
 	pdftitle={Report Finale \quotes{Laboratorio Integrato}},
 	pdfpagemode=FullScreen,
 }
+\graphicspath{ {../ImmaginiReportFineProgetto/} }
+
 \author{De lazzari, Dellera, Oglietti,\\
  Murta, Cafasso, Carrieri}
 \title{Report Finale \quotes{Laboratorio Integrato}\\
@@ -192,6 +195,7 @@
 			prodotta nel corso degli anni. Questo prodotto abbraccia le moderne tecnologie in ambito di sviluppo web e
 			di sicurezza grazie al massiccio utilizzo di \emph{ASP.NET Core 5} e all'utilizzo come database predefinito
 			di \emph{MySQL} fino alle ultime versioni stabili. 
+	\newpage
 	\section{Architettura di rete}\label{architettura_di_rete}%Inserire grafichetto della struttura
 		L'architettura di rete scelta e' basata sull'utilizzo di una singola macchina virtuale in \emph{cloud} sulla
 		sopracitata piattaforma \emph{MS Azure}.
@@ -233,8 +237,8 @@
 		architettura proposta e' quella di regolamentare e limitare l'accesso alle connessioni \emph{SSH} per i soggetti
 		non autorizzati.
 
-		In figura una rappresentazione grafica di quanto illustrato.
- 
+		In figura \ref{fig:architettura_di_rete} una rappresentazione grafica di quanto illustrato.
+
 	\section{Organizzazione container}\label{organizzazione_container}
 		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
 		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche offre numerosi vantaggi rispetto
@@ -243,7 +247,6 @@
 		\emph{hardware} a disposizione. Inoltre, il parziale isolamento di un \emph{container} rispetto alla macchina
 		\emph{host} rende l'infrastruttura piu' sicura, in quanto compromettere un singolo applicativo non mette a
 		rischio il resto dell'infrastruttura o degli altri servizi che condividono le medesime risorse.
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%perhaps, non so se lasciarlo o meno
 		Infine e' importante sottolineare che, grazie all'utilizzo di \emph{Docker Compose},uno strumento per la 
 		definizione e l'esecuzione di applicazioni \emph{Docker} multi-contenitore, possiamo utilizzare un singolo comando per
 		creare e avviare tutti i container definiti nel file yaml. Non solo, ci permette di definire e collegare in una
@@ -271,7 +274,14 @@
 
 		I \emph{container} sono configurati in maneira da utilizzare due porte per la comunicazione: la porta
 		\texttt{80} e la porta \texttt{3306}. Rispettivamente usate per permettere al \emph{container} contenente
-		\emph{nopCommerce} di essere esposto verso internet, e sempre al medesimo di effettuare le comunicazioni con il database \emph{MySQL}.
+		\emph{nopCommerce} di essere esposto verso internet, e sempre al medesimo di effettuare le comunicazioni con il
+		database \emph{MySQL}.
+
+		\begin{figure}[H]
+		\includegraphics[scale=0.3]{DiagrammaDiRete.jpg}\label{fig:architettura_di_rete}
+		\caption{Infrastruttura di rete}
+		\end{figure}
+ 
 
 \chapter{Processo di implementazione}\label{processo_di_implementazione}
 	Per gestire al meglio le tempistiche e la messa a terra del progetto abbiamo strutturato un processo diviso in fasi,
@@ -362,7 +372,12 @@
 		un primo account con privilegi amministrativi a un membro, il quale ha poi condiviso le credenziali necessarie
 		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato poi
 		possibile impostare profili personali per ognuno dei membri del gruppo, dotando ognuno dei minimi privilegi
-		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}.
+		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}. In figura
+		sono illustrati i gruppi di appartenenza di ciascun utente.
+		\begin{figure}[H]
+		\includegraphics[scale=0.5]{UtentiEGruppi.png}\label{fig:groups}
+		\caption Gruppi di afferenza per ogni utente
+		\end{figure}
 		Ognuno dei profili utente creati e' dotato di una coppia di chiavi \emph{RSA} generata tramite il comando
 		\texttt{ssh-keygen -b 4048}, che, in congiunzione con le coppie di chiavi delle macchine dei rispettivi membri
 		del gruppo ha permesso di impostare un accesso ai profili utenti tramite chiave univoca. 
@@ -394,14 +409,60 @@
 		mettere in produzione la piattaforma \emph{ e-commerce} in pochi minuti, in maniera totalmente indipedente dal
 		\emph{provider} di servizi \emph{cloud} utilizzato.
 		L'ultima fase della \quotes{sperimentazione} sulla macchina di prova si e' concentrata sull'implementazione del
-		metodo di pagamento.
+		metodo di pagamento. Risultato che e' stato facilmente ottenuto grazie all'integrazione della piattaforma con
+		diversi metodi di pagamento, in particolare, e' stato scelto di utilizzare \emph{PayPal}. Si tratta di un metodo
+		di pagamento sicuro che offre canoni bassi e una relativa facilita' di utlizzo. Per effettuare
+		l'implementazione, e' stato necessario configurare il metodo tramite l'interfaccia grafica dello \emph{store} e
+		collegarlo con un \emph{account} precedentemente creato.
 
 		In ultimo, grazie ai test e alle prove effettuate sulla macchina di prova, e' stato possibile creare una nuova
 		macchina denominata \texttt{prod} dotata di tutte le misure di sicurezza sopracitate nella quale attivare la
 		piattaforma in totale tranquillita', evitando inoltre di \quotes{sporcare} la macchina con esperimenti di sorta,
-		il risultato si e' rivelato molto semplice e pulito, ideale per essere mantenuto al meglio.
+		il risultato si e' rivelato molto semplice e pulito, ideale per essere mantenuto al meglio. Come illustrato
+		nell'immagine \ref{fig:architettura_di_rete}, l'accesso da parte degli amministratori di sistema e' stato
+		mantenuto tramite autenticazione chiave \emph{SSH} per rendere piu' semplice possibile la manutenzione,
+		l'aggiornamento e l'eventuale aggiunta di serivzi.
 
 	\section{Test di sicurezza}\label{test_di_sicurezza}
+		Come ultima fase prima della pubblicazione, e' stato scelto di operare alcuni \quotes{sommari} test di
+		sicurezza, al fine di controllare la solidita' dell'infrastruttura sviluppata.
+		Per rendere la procedura utile al fine di migliorare la sicurezza del'infrastruttura, e' stato scelto di
+		adoperare una modalita' di azione denominata come \emph{Black Box}. In questa modalita', l'attaccante, anche
+		avendo accesso all'infrastruttura agisce come se non avesse nessun informazione, partendo quindi dall'analisi
+		della superfice esposta.
+		\subsection{Analisi del perimetro}\label{analisi_del_perimetro}
+			Come prima azione, e' essenziale la scoperta di quante piu' informazioni possibili in merito al bersaglio,
+			il primo passo in questa direzione e' sicuramente quello dell'utilizzo dello strumento \emph{nmap} al fine
+			di ottenere informazioni sui servizi attivi sul bersaglio ed eventualmente esporne vulnerabilita'.
+			\emph{Nmap}, abbreviazione di \emph{Network Mapper} e' un programma di \emph{network discovery} e
+			\emph{security auditing}, il suo scopo e' analizzare un dato indirizzo per scoprire informazioni sulle porte
+			aperte, sui servizi attivi e su possibili vulnerabilita' relative ad essi.
+
+			La scansione tramite il sopracitato programma rivela che la macchina analizzata ha le seguenti porte attive:
+			\begin{itemize}
+				\item 22/tcp: \texttt{SSH}
+				\item 53/tcp: \texttt{domain}
+				\item 80/tcp: \texttt{HTTP}
+			\end{itemize}
+			Nonostatne l'approccio \emph{Black Box}, non sapendo quindi che tipo di autenticazione viene permessa da
+			parte del server per quanto riguarda il protocollo \emph{SSH}, tentare di forzare un accesso tramite un
+			attacco \emph{Brute Force} risulterebbe essere solamente una perdita di tempo. Anche assumento un nome
+			semplice per un \emph{account} utente quale \quotes{nopCommerce}, desumibile dalle informazioni ottenute
+			riguardanti il servizio sulla porta \emph{80}, un attacco a forza bruta basato su una \emph{wordlist} di
+			\emph{password} diffuse avrebbe comunque delle tempistiche molto lunghe, e si rivelerebbe comunque
+			probalilmente infruttuoso.
+			Viene quindi scelto di percorre la strada dell'analisi della piattaforma pubblicata sulla porta \texttt{80}.
+			Tramite il programma di scansione \emph{gobuster} e' possibile ottenere informazioni aggiuntive su cio' che
+			e' pubblicato sulle porte \emph{http e https}, il \emph{software} si occupa di tentare di contattare una
+			serie di pagine collegate al dominio di secondo livello in successione, prendendo i nomi da una lista di
+			pagine comuni. Filtrando poi le pagine che restituiscono una risposta \emph{http} positiva, ossia i seguenti
+			codici:
+			\begin{itemize}
+				\item \texttt{200 : OK}
+				\item \texttt{301 : Moved Permanently}
+				\item \texttt{203 : Found}
+			\end{itemize}
+			
 
 \chapter{Penetration testing}\label{penetration_testing}
 	\section{Le premesse}\label{le_premesse}
