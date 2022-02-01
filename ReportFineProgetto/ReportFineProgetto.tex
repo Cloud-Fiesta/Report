@@ -378,9 +378,12 @@
 		maniera, anche se in possesso delle credenziali di accesso di un utente, e' comunque impossibile effettuare il
 		\emph{login} all'\emph{account} \emph{nopCommerce} in quanto esso non ha un effettiva \emph{shell} interattiva
 		con la quale interfacciarsi.
-		Infine, sia tramite l'interfaccia di \emph{Microsoft Azure} sia tramite il \emph{firewall} implementato, sono
-		state definite %policy ecc
-
+		Inoltre, sia tramite l'interfaccia di \emph{Microsoft Azure} sia tramite il \emph{firewall} implementato, sono
+		state definite alcune \emph{policy} atte a limitare l'accesso all'infrastruttura da parte di soggetti non
+		autorizzati. In particolare le \emph{policy} sono state suddivise principalmente in due categorie: quelle legate
+		alle connessioni \emph{SSH}, gestite da \emph{Fail2Ban} e \emph{UFW}; e quelle gestite dalla piattaforma
+		\emph{Azure}, atte principalmente all'amministrazione delle connessioni verso la macchina virtuale e le sue
+		porte.
 		Grazie alla fase di produzione in locale, e' stato possibile definire una serie di passaggi per rendere piu'
 		agile il \emph{deploy} dell'infrastruttura, partendo dall'immagine ufficiale di \emph{nopCommerce} disponibile
 		su \emph{Docker Hub}, e' stato possibile costruirne una personalizzata, contenente direttamente le immagini
@@ -390,6 +393,13 @@
 		produzione.  Questo espediente, insime a due file di configurazione in formato execel, da la possibilita' di
 		mettere in produzione la piattaforma \emph{ e-commerce} in pochi minuti, in maniera totalmente indipedente dal
 		\emph{provider} di servizi \emph{cloud} utilizzato.
+		L'ultima fase della \quotes{sperimentazione} sulla macchina di prova si e' concentrata sull'implementazione del
+		metodo di pagamento.
+
+		In ultimo, grazie ai test e alle prove effettuate sulla macchina di prova, e' stato possibile creare una nuova
+		macchina denominata \texttt{prod} dotata di tutte le misure di sicurezza sopracitate nella quale attivare la
+		piattaforma in totale tranquillita', evitando inoltre di \quotes{sporcare} la macchina con esperimenti di sorta,
+		il risultato si e' rivelato molto semplice e pulito, ideale per essere mantenuto al meglio.
 
 	\section{Test di sicurezza}\label{test_di_sicurezza}
 
