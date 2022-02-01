@@ -38,9 +38,9 @@
 \tableofcontents
 \chapter{Introduzione}\label{introduzione}
 	\section{Il Progetto}\label{il_progetto}
-		Il qui presente report ha lo scopo di illustrare lo svolgimento del progetto a opera del gruppo "Cloud Fiesta",
-		il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel
-		Enrico nell'ambito del corso \textit{\quotes{Laboratorio Integrato}}.
+		Il qui presente report ha lo scopo di illustrare lo svolgimento del progetto a opera del gruppo \quotes{Cloud
+		Fiesta}, il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel Enrico nell'ambito del corso
+		\textit{\quotes{Laboratorio Integrato}}.
 		
 		Lo scopo del progetto e' quello di realizzare una piattaforma di \emph{e-commerce} per conto di un azienda che
 		si occupa di commercio al dettaglio, il sistema deve essere \emph{scalabile} in maniera da poter limitare i
@@ -381,16 +381,15 @@
 		Infine, sia tramite l'interfaccia di \emph{Microsoft Azure} sia tramite il \emph{firewall} implementato, sono
 		state definite %policy ecc
 
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		Grazie alla fase di produzione in locale, abbiamo definito una serie di passaggi per rendere piu' agile il 
-		deploy, partendo dall'immagine ufficiale di nopCommerce su Docker Hub, ne abbiamo costruita una personalizzata 
-		inserendoci direttamente i files .jpeg scaricati per i nostri prodotti del catalogo.
-		La nuova immagine è custodita in repository privato di Docker Hub, funzionale solo al nostro progetto.
-		Basterà lanciare il commando docker-compose up, per avere in pochi minuti i nostri due container attivi e
-		mantenuti in esecuzione. 
-		Assieme a due file di configurazione in formato execel questo ci permette di mettere in produzione il nostro 
-		e-commerce in pochi minuti, in maniera indipedente dal provider.
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		Grazie alla fase di produzione in locale, e' stato possibile definire una serie di passaggi per rendere piu'
+		agile il \emph{deploy} dell'infrastruttura, partendo dall'immagine ufficiale di \emph{nopCommerce} disponibile
+		su \emph{Docker Hub}, e' stato possibile costruirne una personalizzata, contenente direttamente le immagini
+		afferenti ai prodotti presenti all'interno del cataglogo.  La nuova immagine è custodita in repository privato
+		sulla piattaforma \emph{Docker Hub}, funzionale solo al nostro progetto.  Bastera' dunque lanciare il commando
+		\texttt{docker-compose up}, per ottenere in pochi minuti l'intera infrastruttura, attiva e pronta per la
+		produzione.  Questo espediente, insime a due file di configurazione in formato execel, da la possibilita' di
+		mettere in produzione la piattaforma \emph{ e-commerce} in pochi minuti, in maniera totalmente indipedente dal
+		\emph{provider} di servizi \emph{cloud} utilizzato.
 
 	\section{Test di sicurezza}\label{test_di_sicurezza}
 
