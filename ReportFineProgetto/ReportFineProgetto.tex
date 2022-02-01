@@ -2,18 +2,10 @@
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{hyperref}
-\hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	filecolor=magenta,
-	urlcolor=blue,
-	pdftitle={Report Finale "Laboratorio Integrato"},
-	pdfpagemode=FullScreen,
-}
-
 \usepackage[italian]{babel}
+\usepackage{booktabs}
 
-
+\newcommand{\quotes}[1]{``#1''}
 \newcommand\BackgroundPic{%
 	\put(0,0){
 		\parbox[b][\paperheight]{\paperwidth}{%
@@ -25,9 +17,17 @@
 		}
 	}
 }
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=blue,
+	pdftitle={Report Finale \quotes{Laboratorio Integrato}},
+	pdfpagemode=FullScreen,
+}
 \author{De lazzari, Dellera, Oglietti,\\
  Murta, Cafasso, Carrieri}
-\title{Report Finale "Laboratorio Integrato"\\
+\title{Report Finale \quotes{Laboratorio Integrato}\\
 \large Gruppo 6, Cloud Fiesta}
 \date{\today}
 \makeindex
@@ -36,11 +36,12 @@
 \AddToShipoutPicture*{\BackgroundPic}
 \maketitle
 \tableofcontents
-\chapter{Introduzione} \label{introduzione}
-	\section{Il Progetto} \label{il_progetto}
-		Il qui presente report ha lo scopo di illustrare lo svolgimento del progetto a opera del gruppo "Cloud Fiesta", 		il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel
-		Enrico nell'ambito del corso \textit{"Laboratorio Integrato"}.
-
+\chapter{Introduzione}\label{introduzione}
+	\section{Il Progetto}\label{il_progetto}
+		Il qui presente report ha lo scopo di illustrare lo svolgimento del progetto a opera del gruppo "Cloud Fiesta",
+		il progetto e' stato commissionato dai docenti Blanchietti Andrea e Zimuel
+		Enrico nell'ambito del corso \textit{\quotes{Laboratorio Integrato}}.
+		
 		Lo scopo del progetto e' quello di realizzare una piattaforma di \emph{e-commerce} per conto di un azienda che
 		si occupa di commercio al dettaglio, il sistema deve essere \emph{scalabile} in maniera da poter limitare i
 		costi a quanto strettamente necessrio e potersi mantenere aderente con le esigenze di crescita aziendale.
@@ -60,9 +61,9 @@
 		Specialist}.  All'interno di questi due corsi sono presenti le competenze tecniche atte a svolgere il progetto
 		commissionato, coprendo sia l'area di sicurezza e di architettura della rete interna, che quella di utilizzo
 		delle piattaforme cloud che permettono di assicurare la scalabilita' necessaria all'azienda.
-	\section{Il Team} \label{il_team}
+	\section{Il Team}\label{il_team}
 		Gli stutenti di entrambi i corsi sono stati divisi in sei differenti gruppi, composti da un totale di otto persone,
-		il nostro gruppo, denominato "\emph{Cloud Fiesta}" e' composto dai seguenti studenti:
+		il nostro gruppo, denominato \quotes{\emph{Cloud Fiesta}} e' composto dai seguenti studenti:
 		\begin{itemize}
 			\item \textbf{Cafasso Giovanni}
 			\item \textbf{Carrieri Riccardo}
@@ -73,9 +74,9 @@
 		\end{itemize}
 		Suddivisi rispettivamente all'interno dei due corsi come da tabella:
 		\begin{center}
-			\begin{tabular}{c|c}
+			\begin{tabular}{c c}
 				Cloud Specialist & ICT Security Specialist \\
-				\hline
+				\midrule
 				Cafasso Giovanni & De Lazzari Riccardo \\
 				Carrieri Riccardo & Dellera Lorenzo \\
 				Murta Alessio & Oglietti Riccardo \\
@@ -87,15 +88,15 @@
 		\emph{Team Leader} e di e di \emph{Co-Team Leader}, essi sono stati rispettivamente assegnati a \emph{Oglietti
 		Riccardo} e \emph{Murta Alessio}. Abbiamo optato per assegnare queste due cariche ripartendole tra i due
 		differenti corsi che compongono il gruppo in maniera da manternere un buon livello di equita' e rappresentanza
-		per entrambe le anime del team.  Da notare infine come lo studente "Zuccarella Andrea" si e' presentato a un
-		singolo incontro durante la stesura dell'intero progetto, e non ha effettivamente contribuito in alcuna maniera
-		allo svolgimento dello stesso.
+		per entrambe le anime del team.  Da notare infine come lo studente \quotes{Zuccarella Andrea} si e' presentato a
+		un singolo incontro durante la stesura dell'intero progetto, e non ha effettivamente contribuito in alcuna
+		maniera allo svolgimento dello stesso.
 
 \chapter{Strumenti tecnico-organizzativi}
 %\author{Oglietti Riccardo} mettere tutti gli autori?
-	\section{GANTT e cronoprogramma} \label{gantt_e_cronoprogramma}
+	\section{GANTT e cronoprogramma}\label{gantt_e_cronoprogramma}
 		Innanzitutto parlando di strumenti tecnico-organizzativi non e' possibile iniziare senza descrivere il
-		"\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia
+		\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia
 		entrata che permette di assegnare alcuni \emph{task} ritenuti fondamentali a un membro e un momento nel quale
 		realizzarlo.
 
@@ -123,7 +124,7 @@
 					\item Stesura report economico
 				\end{enumerate}
 		\end{itemize}
-	\section{Strumenti di comunicazione} \label{strumenti di comunicazione}
+	\section{Strumenti di comunicazione}\label{strumenti di comunicazione}
 		Durante il primo incontro uno dei principali punti che e' stato chiarito e' quello della \emph{comunicazione}.
 		E' infatti essenziale che in un gruppo di lavoro sia possibile gestire la comunicazione in maniera piu'
 		efficente e inclusiva possibile, senza quindi escludere membri o affidarsi a piattaforme troppo lente o non
@@ -134,7 +135,7 @@
 		sondaggi e inviare file di grandi dimensioni. Grazie a recenti aggiornamenti e' inoltre possibile effettuare
 		videochiamate e condividere eventualmente il proprio desktop, una feature essenziale nel campo del lavoro
 		collaborativo.
-	\section{Organizzazione codice} \label{organizzazione codice}
+	\section{Organizzazione codice}\label{organizzazione codice}
 		Data la forte componente di scrittura software presente all'interno del progetto, si e' propenso per l'utlizzo
 		di una piattaforma di sviluppo collaborativo, in maniera da organizzare la stesura del codice nella maniera piu'
 		semplice ed esaustiva possibile. In particolare ci siamo affidati al software \emph{GIT} a opera di \emph{Linus
@@ -159,23 +160,25 @@
 		Infine, il \emph{repository} \ref{item:ReportE}, nominato come \emph{Report\_Economy}, e' atto ad accogliere i
 		documenti e gli appunti che permetteranno la stesura di un preventivo attendibile dell'implementazione, come
 		richiesto dai requisiti del progetto.
-	\section{Strumenti di scrittura} \label{strumenti_di_scrittura}
+	\section{Strumenti di scrittura}\label{strumenti_di_scrittura}
 		Come accennato durante la precedente sezione, lo strumento principe che e' stato impiegato per la redazione
 		della relazione di progetto e' stato li linguaggio \LaTeX{}. Si tratta di un linguaggio in grado di produrre un
 		testo correttamente formattato a partire da semicodice, in questo modo viene automatizzata la gestione di alcune
 		importanti caratteristiche del documento finale, come per esempio le immagini, spesso punto di debolezza dei
 		comuni software di videoscrittura.
-\chapter{Componenti e architettura} \label{componenti_e_architettura}
-	\section{In generale} \label{in_generale}
-		\subsection{Microsoft Azure} \label{microsoft_azure}
+\chapter{Componenti e architettura}\label{componenti_e_architettura}
+	\section{In generale}\label{in_generale}
+		\subsection{Microsoft Azure}\label{microsoft_azure}
 			Per descrivere l'architettura da noi ideata riteniamo importante descrivere il \emph{provider} al quale
-			abbiamo deciso di appoggiarci. La scelta e' ricaduta sullo strumento "\emph{Microsoft Azure}": si tratta
-			di un servizio di \emph{Cloud Computing} offerto da \emph{Microsoft} che, come il resto dei \emph{provider}, offre servizi di \emph{Infrastructure as a 			Service}, \emph{Platform as a Service} e \emph{Software as a Service}
+			abbiamo deciso di appoggiarci. La scelta e' ricaduta sullo strumento \quotes{\emph{Microsoft Azure}}: si
+			tratta di un servizio di \emph{Cloud Computing} offerto da \emph{Microsoft} che, come il resto dei
+			\emph{provider}, offre servizi di \emph{Infrastructure as a Service}, \emph{Platform as a Service} e
+			\emph{Software as a Service}.
 			In particolare e' stato scelto in quanto aderente alle nostre necessita' di gestione di macchine remote da
 			parte di un gruppo organizzato, inoltre, \emph{Microsoft} offre un bonus gratuito di \$100 da spendere
 			sulla piattaforma per ogni persona che vi si registri come studente. Cio', in concomitanza con i prezzi in
 			linea con il mercato, ci ha permesso di sperimentare senza rischiare di dilapidare denaro.
-		\subsection{nopCommerce} \label{nopcommerce}
+		\subsection{nopCommerce}\label{nopcommerce}
 			Durante la nostra ricerca di una soluzione che ci permettesse di creare uno \emph{store online} ci siamo
 			imbattuti in \emph{nopCommerce}, una tecnologia a opera di \emph{nopSolutions}. Si tratta di una soluzione
 			\href{https://github.com/nopSolutions/nopCommerce/blob/develop/LICENSE.md}{\emph{libre}} e
@@ -187,17 +190,18 @@
 			e lo sviluppa permette inoltre una facile risoluzione di eventuali problemi grazie all'ampia
 			\href{https://docs.nopcommerce.com/en/developer/index.html?utm\_source=github&utm\_medium=referral&utm\_campaign=documentation&utm\_content=text}{documentazione}
 			prodotta nel corso degli anni. Questo prodotto abbraccia le moderne tecnologie in ambito di sviluppo web e
-			di sicurezza grazie al massiccio utilizzo di \emph{ASP.NET Core 5} e all'utilizzo di un database tra \emph{MySQL},\emph{Microsoft SQL Server} e 				\emph{PostgreSQL}, messi a disposizione da \emph{nopSolutions}. 
-	\section{Architettura di rete} \label{architettura_di_rete}
+			di sicurezza grazie al massiccio utilizzo di \emph{ASP.NET Core 5} e all'utilizzo come database predefinito
+			di \emph{MySQL} fino alle ultime versioni stabili. 
+	\section{Architettura di rete}\label{architettura_di_rete}%Inserire grafichetto della struttura
 		L'architettura di rete scelta e' basata sull'utilizzo di una singola macchina virtuale in \emph{cloud} sulla
 		sopracitata piattaforma \emph{MS Azure}.
 
 		La macchina virtuale monta un sistema operativo \emph{GNU/Linux Ubuntu Server 20.04 LTS}, e ha le seguenti
 		caratteristiche:
 		\begin{center}
-			\begin{tabular}{c|c}
+			\begin{tabular}{c c}
 				Informazione & Metrica \\
-				\hline
+				\midrule
 				Tipologia & Standard\_D2s\_v3 \\
 				CPU & 2 \\
 				RAM & 8 GB \\
@@ -208,14 +212,14 @@
 
 		Al suo interno sono poi presenti alcuni elementi aggiuntivi, che compongono la vera e propria infrastruttura.
 
-		Innanzitutto e' presente \emph{Docker}, si tratta del runtime più diffuso per \emph{container}
-		sul mercato. I \emph{container} sono "entita" che al loro interno contengono un ambiente minimale con tutte le
-		componenti necessarie a un applicativo per svolgere il suo funzionamento, comprese tutte le dipendenze di ognuna
-		delle sue parti. Questa entita' si interfaccia poi con il \emph{Docker Engine}, un software che si occupa di
-		tradurre le richieste del container in chiamate al sistema operativo sottostante, in questo caso una
+		Innanzitutto e' presente \emph{Docker}, si tratta del \emph{runtime} piu' diffuso per \emph{container} diffuso
+		sul mercato. I \emph{container} sono \quotes{entita'} che al loro interno contengono un ambiente minimale con
+		tutte le componenti necessarie a un applicativo per svolgere il suo funzionamento, comprese tutte le dipendenze
+		di ognuna delle sue parti. Questa entita' si interfaccia poi con il \emph{Docker Engine}, un software che si
+		occupa di tradurre le richieste del container in chiamate al sistema operativo sottostante, in questo caso una
 		distribuzione di \emph{Ubuntu GNU/Linux}.
 
-		Da sottolineare poi la fondamentale presenza di \emph{SSH} \label{SSH}.  Si tratta dell'implementazione
+		Da sottolineare poi la fondamentale presenza di \emph{SSH}\label{SSH}. Si tratta dell'implementazione
 		dell'omonimo protocollo di connessione remota per sistemi operativi \emph{UNIX like}. Esso permette di
 		effettuare una connessione remota con una macchina tramite una coppia di credenziali oppure attraverso una chiave
 		\emph{RSA}, criptando il traffico in maniera da mantenere la riservatezza della comunicazione.
@@ -228,21 +232,22 @@
 		Anche \emph{Fail2Ban} si occupa di una funzione simile, in quanto la sua funzione prinicpale all'interno dell'
 		architettura proposta e' quella di regolamentare e limitare l'accesso alle connessioni \emph{SSH} per i soggetti
 		non autorizzati.
+
+		In figura una rappresentazione grafica di quanto illustrato.
  
-	\section{Organizzazione container} \label{organizzazione_container}
+	\section{Organizzazione container}\label{organizzazione_container}
 		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
 		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche offre numerosi vantaggi rispetto
-		alla piu' "classica" architettura basata sull'utlizzo di macchine virtuali dedicate. In particolare, una
+		alla piu' \quotes{classica} architettura basata sull'utlizzo di macchine virtuali dedicate. In particolare, una
 		macchina e' in grado di gestire diversi \emph{container}, ottimizzando al meglio le risorse
 		\emph{hardware} a disposizione. Inoltre, il parziale isolamento di un \emph{container} rispetto alla macchina
 		\emph{host} rende l'infrastruttura piu' sicura, in quanto compromettere un singolo applicativo non mette a
 		rischio il resto dell'infrastruttura o degli altri servizi che condividono le medesime risorse.
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%perhaps, non so se lasciarlo o meno
 		Infine e' importante sottolineare che, grazie all'utilizzo di \emph{Docker Compose},uno strumento per la 
-		definizione e l'esecuzione di applicazioni Docker multi-contenitore, possiamo utilizzare un singolo comando per
+		definizione e l'esecuzione di applicazioni \emph{Docker} multi-contenitore, possiamo utilizzare un singolo comando per
 		creare e avviare tutti i container definiti nel file yaml. Non solo, ci permette di definire e collegare in una
-		network logica i container, che interagiranno tra loro come fosserò macchine fisiche. 
-
+		rete logica i \emph{container}, che interagiranno tra loro come fosserò macchine fisiche.
 		Per implementare la nostra infrastruttura, abbiamo deciso di utilizzare i seguenti \emph{container}:
 		\begin{itemize}
 			\item nopCommerce
@@ -253,8 +258,9 @@
 		di tutte le componenti atte a pubblicare le pagine \emph{web} sulla porta \texttt{8080}.
 		
 		Il secondo \emph{contaier} invece, contiene un database \emph{MySQL} che si occupera' di contenere tutte le
-		informazioni riguardanti i prodotti, i clienti, gli acquisti ecc... 
-		\\Ecco alcuni dei campi presenti all'interno del \emph{database} nella tabella \emph{Products}
+		informazioni riguardanti i prodotti, i clienti, gli acquisti e molto altro.
+		
+		Ecco alcuni dei campi presenti all'interno del \emph{database}
 		\begin{enumerate}
 			\item ProductId
 			\item ProductType
@@ -267,7 +273,7 @@
 		\texttt{80} e la porta \texttt{3306}. Rispettivamente usate per permettere al \emph{container} contenente
 		\emph{nopCommerce} di essere esposto verso internet, e sempre al medesimo di effettuare le comunicazioni con il database \emph{MySQL}.
 
-\chapter{Processo di implementazione} \label{processo_di_implementazione}
+\chapter{Processo di implementazione}\label{processo_di_implementazione}
 	Per gestire al meglio le tempistiche e la messa a terra del progetto abbiamo strutturato un processo diviso in fasi,
 	esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il carico
 	di lavoro in maniera coerente. In particolare possiamo individuare tre principali fasi, elencate di seguito;
@@ -280,7 +286,7 @@
 	\end{enumerate}
 	Ognuna di queste fasi del lavoro ha occupato un diverso ruolo e ha necessitato sforzi di natura diversa, ecco dunque
 	presentata una breve sintesi di quanto accaduto in ognuna di esse.
-	\section{Brainstorming e ricerca} \label{brainstorming_e_ricerca}
+	\section{Brainstorming e ricerca}\label{brainstorming_e_ricerca}
 		Durante la prima parte del progetto, il gruppo si e' dedicato all'individuazione degli strumenti precedentemente
 		citati atti all'implementazione di quanto richiesto. Questo iniziale sforzo e' stato portato avanti
 		contemporanemente da tutti i membri del gruppo, mentre i membri afferenti al corso di \emph{Cloud Specialist} si
@@ -290,10 +296,10 @@
 		Durante questa fase iniziale, sono stati inoltre individuati lo strumento atto alla creazione dello \emph{store
 		online}, la relativa gesione del \emph{database} e tutti gli strumenti di comunicazione, organizzazione e
 		videoscrittura.
-	\section{Prototipazione e scripting} \label{prototipazione_e_scripting}
+	\section{Prototipazione e scripting}\label{prototipazione_e_scripting}
 		La fase successiva si e' rivalta essere molto piu' pratica di quella appena svolta, in quanto il gruppo si e'
 		trovato a dover iniziare a risolvere alcuni problemi pratici, come il \emph{parsing} del file \emph{csv}
-		contenente i dati per popolare il \emph{database} e l'utilizzo di \emph{nopCommerce}.
+		contenente i dati atti a popolare il \emph{database} e l'utilizzo di \emph{nopCommerce}.
 
 		La necessita' di agire sul file originale contenente i dati iniziali per popolare il \emph{database} e' nata
 		dalla scelta operata dal team di sicurezza di mantenere una copia delle immagini localmente alla macchina in
@@ -310,7 +316,7 @@
 
 		Durante questa fase sono state esplorate le varie opzioni per l'implementazione di \emph{nopCommerce},
 		considerando quale sistema operativo e strategia di \emph{deploy} scegliere tra le diverse disponibli.
-	\section{Implementazione locale} \label{implementazione_locale}
+	\section{Implementazione locale}\label{implementazione_locale}
 		La fase logicamente successiva ha quindi previsto l'implementazione per intero dello \emph{store} localmente,
 		in maniera da poter evidenziare eventuali criticita' e difficolta' di messa in produzione. In particolare
 		l'utilizzo del \emph{database} ha inizialmente creato alcune difficolta', al fine di condurre test e
@@ -319,7 +325,7 @@
 		all'interno della programmazione \emph{WEB}, l'acronimo simboleggia i \emph{software} conenuti al suo interno,
 		ossia:
 		\begin{center}
-			\begin{tabular}{c|c}
+			\begin{tabular}{c c}
 				X & Cross-Plattform \\
 				A & Apache WEB-server \\
 				M & MySQL \\
@@ -329,15 +335,16 @@
 		\end{center}
 		In particolare, le difficolta' sono state riscontrate nell'importazione del \emph{database}: \emph{nopCommerce}
 		sfrutta una serie di parametri non presenti all'interno del file originariamente fornitoci, e' quindi stata
-		necessaria un'operazione di modifica per adattare il file iniziale alle esigenze della piattaforma da noi scelta.
+		necessaria un'operazione di modifica per adattare il file iniziale alle esigenze della piattaforma da noi
+		scelta.
 		Prima di giungere a questa soluzione, sono state riscontrate diverse anomalie, per esempio l'impossibilita' di
-		visualizzare i prodotti ottenuti, o di aggiungerli al "carrello" per terminare l'acquisto.
-		Il problema e' stato finalmente risolto tramite l'esportazione della tabella \emph{products} tramite l'interfaccia alla
-		piattaforma per comprenderne al meglio la struttura, e poter di conseguenza strutturare il file \emph{CSV} in
-		maniera consona.
+		visualizzare i prodotti ottenuti, o di aggiungerli al \quotes{carrello} per terminare l'acquisto.
+		Il problema e' stato finalmente risolto tramite l'esportazione della tabella \emph{products} tramite
+		l'interfaccia alla piattaforma per comprenderne al meglio la struttura, e poter di conseguenza strutturare il
+		file \emph{CSV} in maniera consona.
 		Una volta utlimata un implementazione completamente funzionante della piattaforma di \emph{e-commerce}
 		localmente, e' iniziata la sperimentazione remota, descritta in maniera piu' completa di seguito.
-	 \section{Implementazione remota} \label{implementazione_remota}
+	 \section{Implementazione remota}\label{implementazione_remota}
 		%aggiungere anche la fase di testing in remoto e l'implementazione di payPal
 		Durante la fase di implementazione remota, lo scopo del gruppo e' stato quello di ottenere un infrastruttura
 		funzionante e completa, compresa di dati e grossolane misure di sicurezza, da poter poi raffinare fino
@@ -353,8 +360,28 @@
 		per poter ottenere visibilita' sulla macchina che avrebbe ospitato l'infrastruttura e infine dell'asegnazione di
 		chiavi di accesso univoche a tutti i membri. E' stato quindi scelto di lasciare la creazione della macchina e di
 		un primo account con privilegi amministrativi a un membro, il quale ha poi condiviso le credenziali necessarie
-		alla connessione remota tramite comunicazione criptata.
-		
+		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato poi
+		possibile impostare profili personali per ognuno dei membri del gruppo, dotando ognuno dei minimi privilegi
+		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}.
+		Ognuno dei profili utente creati e' dotato di una coppia di chiavi \emph{RSA} generata tramite il comando
+		\texttt{ssh-keygen -b 4048}, che, in congiunzione con le coppie di chiavi delle macchine dei rispettivi membri
+		del gruppo ha permesso di impostare un accesso ai profili utenti tramite chiave univoca. 
+		Grazie a questi scambi di chiavi, e' stato succcessivamente possibile disabilitare l'accesso via \emph{password}
+		a tutti gli utenti, rinforzando notevolmente la sicurezza della macchina e dell'infrastruttura. E' poi stato
+		creato un utente denominato \emph{nopCommerce} abilitato ad utilizzare solamente i comandi indispensabili alla
+		gestione dei container contenenti la piattaforma e il relativo \emph{database}. Questo account e' inoltre privo
+		di chiavi e inibito dallo stabilire connessioni \emph{SSH} in entrata o in uscita tramite l'utilizzo di
+		\emph{policy}, in maniera da renderlo accessibile solamente da un utente all'interno della macchina tramite il
+		comando \texttt{su}, protetto da una \emph{password} notevolmente robusta. Una volta terminata la messa in rete
+		della piattaforma di \emph{e-commerce} l'utente \emph{nopCommerce} e' stato ulteriormente limitato tramite
+		l'ipostazione della \emph{shell} \texttt{/sbin/nologin} come interfaccia predefinita dell'utente, in questa
+		maniera, anche se in possesso delle credenziali di accesso di un utente, e' comunque impossibile effettuare il
+		\emph{login} all'\emph{account} \emph{nopCommerce} in quanto esso non ha un effettiva \emph{shell} interattiva
+		con la quale interfacciarsi.
+		Infine, sia tramite l'interfaccia di \emph{Microsoft Azure} sia tramite il \emph{firewall} implementato, sono
+		state definite %policy ecc
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		Grazie alla fase di produzione in locale, abbiamo definito una serie di passaggi per rendere piu' agile il 
 		deploy, partendo dall'immagine ufficiale di nopCommerce su Docker Hub, ne abbiamo costruita una personalizzata 
 		inserendoci direttamente i files .jpeg scaricati per i nostri prodotti del catalogo.
@@ -363,11 +390,12 @@
 		mantenuti in esecuzione. 
 		Assieme a due file di configurazione in formato execel questo ci permette di mettere in produzione il nostro 
 		e-commerce in pochi minuti, in maniera indipedente dal provider.
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\section{Test di sicurezza} \label{test_di_sicurezza}
+	\section{Test di sicurezza}\label{test_di_sicurezza}
 
-\chapter{Penetration testing} \label{penetration_testing}
-	\section{Le premesse} \label{le_premesse}
-	\section{Information gathering} \label{information_gathering}
+\chapter{Penetration testing}\label{penetration_testing}
+	\section{Le premesse}\label{le_premesse}
+	\section{Information gathering}\label{information_gathering}
 
 \end{document}
