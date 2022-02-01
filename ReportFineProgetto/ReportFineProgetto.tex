@@ -149,9 +149,9 @@
 		Sulla piattaforma ci siamo quindi premurati di creare immediatamente tre \emph{repository} atti a contenere il
 		lavoro prodotto dal gruppo, in particolare essi sono:
 		\begin{enumerate}
-			\item Random\_Script\label{item:Script}
-			\item Report\label{item:Report}
-			\item Report\_Economy\label{item:ReportE}
+			\item \texttt{Random\_Script}\label{item:Script}
+			\item \texttt{Report}\label{item:Report}
+			\item \texttt{Report\_Economy}\label{item:ReportE}
 		\end{enumerate}
 
 		Il repository numero \ref{item:Script}{, \emph{Random\_Script}} e' atto al contenimento di una serie di
@@ -324,7 +324,12 @@
 		corretto ordine e il riferimento al prodotto. Questo compito e' stato reso piu' difficile da alcuni problemi di
 		formattazione conentuti all'interno del file originale. Come prima azione, lo \emph{script} si occupa di
 		controllare che tutti gli \emph{URL} siano validi e non nulli, dopodiche procede con l'effettivo scaricamento e
-		indicizzazione delle immagini.
+		indicizzazione delle immagini, in figura \ref{fig:script} un'estratto dal sopracitato script.
+
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{Script.png}\label{fig:script}
+			\caption \\Script atto al \emph{download} delle immagini.
+		\end{figure}
 
 		Durante questa fase sono state esplorate le varie opzioni per l'implementazione di \emph{nopCommerce},
 		considerando quale sistema operativo e strategia di \emph{deploy} scegliere tra le diverse disponibli.
@@ -376,10 +381,13 @@
 		possibile impostare profili personali per ognuno dei membri del gruppo, dotando ognuno dei minimi privilegi
 		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}. In figura
 		\ref{fig:utenti_e_gruppi} sono illustrati i gruppi di appartenenza di ciascun utente.
+
 		\begin{figure}[H]
-			\includegraphics[scale=0.5]{UtentiEGruppi.png}\label{fig:utenti_e_gruppi}
-			\caption Gruppi di afferenza per ogni utente
+			%\includegraphics[scale=0.5]{UtentiEGruppi.png}\label{fig:utenti_e_gruppi}
+			\includegraphics[width=\textwidth]{UtentiEGruppi.png}\label{fig:utenti_e_gruppi}
+			\caption \\Gruppi di afferenza per ogni utente
 		\end{figure}
+
 		Ognuno dei profili utente creati e' dotato di una coppia di chiavi \emph{RSA} generata tramite il comando
 		\texttt{ssh-keygen -b 4048}, che, in congiunzione con le coppie di chiavi delle macchine dei rispettivi membri
 		del gruppo ha permesso di impostare un accesso ai profili utenti tramite chiave univoca. 
@@ -469,6 +477,4 @@
 \chapter{Penetration testing}\label{penetration_testing}
 	\section{Le premesse}\label{le_premesse}
 	\section{Information gathering}\label{information_gathering}
-
-\chapter{Costi }
 \end{document}
