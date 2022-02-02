@@ -23,9 +23,7 @@ still be written in a line.
 Generally, the use of \emph instead of \textit and \textbf is advised, that's just because is way easier to let LaTeX
 decide what type of enmphasis use depending on the context, force a particular tipe of emphasis is still permitted.
 
-\newpage
 ## Indentation
-
 According to the standard LaTeX syntax, every section (chapters, section, subsection etc) mean an indentation level,
 every level is a 4-spaces long tab (^I).
 
@@ -34,12 +32,16 @@ As an example, that's an extract from the report:
 	\chapter{Introduzione}
 	\author{Riccardo Oglietti}
 		\section{Il Progetto}
-		Some text
-		\subsection{Le Persone}
-			Some other text
+			Some text
+			\subsection{Le Persone}
+				Some other text
 
 ## Numbers
-
 According to best practices of the Italian language, when using numbers, is mandatory the use of the written form,
 instead of the "mathematical" one. As an exemple, "_Ci son 2 coccodrilli e un Harambe_" isn't correct, it must be
 written as "_Ci son_ **due** _coccodrilli e un Harambe_".
+
+## Impersonal writing
+It's preferred to usa an **impersonal** style of writing, periods like: "Abbiamo quindi scelto" must be rephrased with
+something as "E' stato deciso", that's because is considered not formal to call a particular subject or group during the
+development of a report.
