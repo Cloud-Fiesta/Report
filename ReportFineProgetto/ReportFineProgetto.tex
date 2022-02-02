@@ -289,8 +289,8 @@
 		database \emph{MySQL}.
 
 		\begin{figure}[H]
-			\includegraphics[scale=0.3]{DiagrammaDiRete.jpg}\label{fig:architettura_di_rete}
-			\caption{Infrastruttura di rete}
+			\includegraphics[scale=0.3]{DiagrammaDiRete.jpg}
+			\caption{Infrastruttura di rete.}\label{fig:architettura_di_rete}
 		\end{figure}
  
 
@@ -336,8 +336,8 @@
 		indicizzazione delle immagini, in figura \ref{fig:script} un'estratto dal sopracitato script.
 
 		\begin{figure}[H]
-			\includegraphics[width=\textwidth]{Script.png}\label{fig:script}
-			\caption \\Script atto al \emph{download} delle immagini.
+			\includegraphics[width=\textwidth]{Script.png}
+			\caption{Script atto al \emph{download} delle immagini.}\label{fig:script}
 		\end{figure}
 
 		Durante questa fase sono state esplorate le varie opzioni per l'implementazione di \emph{nopCommerce},
@@ -391,9 +391,8 @@
 		\ref{fig:utenti_e_gruppi} sono illustrati i gruppi di appartenenza di ciascun utente.
 
 		\begin{figure}[H]
-			%\includegraphics[scale=0.5]{UtentiEGruppi.png}\label{fig:utenti_e_gruppi}
-			\includegraphics[width=\textwidth]{UtentiEGruppi.png}\label{fig:utenti_e_gruppi}
-			\caption \\Gruppi di afferenza per ogni utente
+			\includegraphics[width=\textwidth]{UtentiEGruppi.png}
+			\caption{Gruppi di afferenza per ogni utente.}\label{fig:utenti_e_gruppi}
 		\end{figure}
 
 		Ognuno dei profili utente creati e' dotato di una coppia di chiavi \emph{RSA} generata tramite il comando
@@ -480,9 +479,56 @@
 			\begin{itemize}
 				\item \texttt{200}: OK
 				\item \texttt{301}: Moved Permanently
+				\item \texttt{302}: Found
 				\item \texttt{203}: Found
 			\end{itemize}
-			
+			Il risultato ottenuto dall'utilizzo di questo \emph{software} e' un file di testo da oltre centoquarantamila
+			righe, contenente per la maggior parte codici \texttt{302}, di seguito sono elenceti i piu' significativi
+			risultati con codice pari a \texttt{200}:
+			\begin{itemize}
+				\item \texttt{/search}
+				\item \texttt{/news}
+				\item \texttt{/home}
+				\item \texttt{/electronics}
+				\item \texttt{/blog}
+				\item \texttt{/sitemp}
+				\item \texttt{/contactus}
+				\item \texttt{/forums}
+				\item \texttt{/register}
+				\item \texttt{/about-us}
+				\item \texttt{/login}
+				\item \texttt{/wishlist}
+				\item \texttt{/cart}
+				\item \texttt{/conditions-of-use}
+			\end{itemize}
+			Aprendo le pagine all'interno di un \emph{browser} possiamo accertarci che siano effettivamente tutte pagine
+			accessibili e valide, non e' pero' presente nessuna pagina \quotes{nascosta} di sorta. L'obbiettivo di
+			questo genere di enumerazione e' quello di scoprire eventuali pagine \quotes{temporanee} utilizzate durante
+			lo sviluppo del sito e poi dimenticate, esse potrebbero contenere informazioni rilevanti o eventuali
+			vulerabilita', sfortunatamente tutte le pagine analizzate sono volutamente accessibili e non contengono
+			informazioni rilevanti. In figura \ref{fig:home_page} tutte le pagine disponibili aperte in un browser.
+
+			\begin{figure}[H]
+				\includegraphics[width=\textwidth]{HomePage.png}
+				\caption{Homepage insieme a tutte le altre pagine disponibli.}\label{fig:home_page}
+			\end{figure}
+
+		\section{Analisi server web}
+			Date le poche informazioni a disposizione, il passaggio successivo prevede l'acquisizione di ulteriori dati
+			riguardanti le tecnologie utilizzate dal \emph{server web} del soggeto, questa operazione viene effettuata
+			con l'ausilio del programma \emph{WhatWeb}, richiamato tramite il seguente comando \texttt{whatweb -v
+			\emph{domain or IP}}. Si tratta di un \emph{software} atto all'identificazione del \emph{server web} e delle
+			tecnologie utilizzate in esso.
+
+			La scansione effettuata con il sopracitato \emph{WhatWeb} mette in luce come il \emph{server web} sia una
+			versione di \emph{Kestrel}, si tratta di un prodotto \emph{Microsoft} atto alla gestione di pagine scritte
+			principalmente in \emph{ASP.NET} e derivati. Un altra informazione ottenuta riguarda il nome
+			dell'organizzazione proprietaria della piattaforma, ossia \emph{\quotes{Cloud Fiesta}}, informazione che
+			potrebbe risultare utile nel caso si ottenga la possibilita' di effettuare un \emph{login} sulla piattaforma
+			come amministratore, nomi comuni e in forte relazione con il contenuto delle pagine di riferimento sono
+			spesso usati per la creazione di \emph{account} amministrativi e di test, che potrebbero avere privilegi
+			elevati, o avere le medesime credenziali di \emph{account} all'interno della macchina che contiente la
+			piattaforma.
 
 \chapter{Penetration testing}\label{penetration_testing}
 	\section{Le premesse}\label{le_premesse}
