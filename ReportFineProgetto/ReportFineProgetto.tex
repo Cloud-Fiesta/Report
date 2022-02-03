@@ -551,13 +551,22 @@
 				risalgono ai primi mesi del 2021, se il sito e' effettivamente stato pubblicato durante il 2022 queste
 				falle saranno sicuramente state risolte all'interno dell'ultima versione stabile, rendendo quindi
 				l'\emph{e-commerce} sicuro.
-
 			\subsection{Kestrel}\label{kestrel}
 				Come durante la sezione~\ref{nopcomerce_2}, il primo passo verso l'individuazione di vulnerabilita' e'
 				scoprie quante piu' informazioni possibili in merito all'obbiettivo. Rileggendo gli output ottenuti
 				dall'analisi con gli strumenti \emph{nmap}~\ref{nmap}, \emph{gobuster}~\ref{gobuster} e
-				\emph{whatweb}~\ref{whatweb}, si puo' notare come
+				\emph{whatweb}~\ref{whatweb}, si puo' notare come non siano presenti informazioni di sorta riguardanti
+				la versione dell'applicativo. Tramite la pagina \emph{GitHub} della piattaforma \emph{nopCommerce} e'
+				pero' possibile risalire alla versione del linguaggio \emph{ASP.NET Core} utilizzata per la creazione
+				del progetto, in questo modo, viene reso noto che il sopracitato linguaggio si interfaccia con tutte le
+				versioni di \emph{kestrel} disponibili da partire da meta' 2016. Sfortunatamente si tratta di un
+				informazione di scarsa rilevanza, in quanto non permette di restringere particolarmente il campo di
+				ricerca.
 
+				Effettuando una ricerca sulle \emph{CVE}, ossia le vulnerabilita' note di un particolare applicativo,
+				sito o altro genere di \emph{software}, relative a \emph{kestrel} e' possibile notare come anche in
+				questo caso le vulnerabilita' pubbliche siano relative a versioni oramai vecchie, considerando che la
+				piu' recente e' relativa al 2019, possiamo considerare il sistema sicuro.
 \chapter{Penetration testing}\label{penetration_testing}
 	\section{Le premesse}\label{le_premesse}
 	\section{Information gathering}\label{information_gathering}
