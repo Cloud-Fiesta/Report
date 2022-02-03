@@ -153,15 +153,15 @@
 			\item \texttt{Report\_Economy}\label{item:ReportE}
 		\end{enumerate}
 
-		Il repository numero \ref{item:Script}{, \emph{Random\_Script}} e' atto al contenimento di una serie di
+		Il repository numero~\ref{item:Script}{, \emph{Random\_Script}} e' atto al contenimento di una serie di
 		programmi di piccola entita', come il \emph{parser} che si e' occupato di scaricare le immagini dei prodotti da
 		aggiungere successivamente al database dello store, o il \emph{docker-compose.yml} che servira' per effettuare l'operazione di \emph{deploy} sull'infrastruttura in ambiente di produzione.
 
-		Per quanto riguarda \emph{Report}, ossia il numero \ref{item:Report}, si tratta dello spazio atto alla creazione
+		Per quanto riguarda \emph{Report}, ossia il numero~\ref{item:Report}, si tratta dello spazio atto alla creazione
 		del report finale, esso e' stato redatto tramite l'utilizzo del linguaggio \LaTeX{}, argomento che sara'
 		affrontato in dettaglio in seguito.
 
-		Infine, il \emph{repository} \ref{item:ReportE}, nominato come \emph{Report\_Economy}, e' atto ad accogliere i
+		Infine, il \emph{repository}~\ref{item:ReportE}, nominato come \emph{Report\_Economy}, e' atto ad accogliere i
 		documenti e gli appunti che permetteranno la stesura di un preventivo attendibile dell'implementazione, come
 		richiesto dai requisiti del progetto.
 	\section{Strumenti di scrittura}\label{strumenti_di_scrittura}
@@ -170,6 +170,7 @@
 		testo correttamente formattato a partire da semicodice, in questo modo viene automatizzata la gestione di alcune
 		importanti caratteristiche del documento finale, come per esempio le immagini, spesso punto di debolezza dei
 		comuni software di videoscrittura.
+
 \chapter{Componenti e architettura}\label{componenti_e_architettura}
 	\section{In generale}\label{in_generale}
 		\subsection{Provider servizi cloud}\label{provider_servizi_cloud}
@@ -206,7 +207,6 @@
 			prodotta nel corso degli anni. Questo prodotto abbraccia le moderne tecnologie in ambito di sviluppo web e
 			di sicurezza grazie al massiccio utilizzo di \emph{ASP.NET Core 5} e all'utilizzo come database predefinito
 			di \emph{MySQL} fino alle ultime versioni stabili. 
-	\newpage
 	\section{Architettura di rete}\label{architettura_di_rete}%Inserire grafichetto della struttura
 		L'architettura di rete scelta e' basata sull'utilizzo di una singola macchina virtuale in \emph{cloud} sulla
 		sopracitata piattaforma \emph{MS Azure}.
@@ -248,7 +248,7 @@
 		architettura proposta e' quella di regolamentare e limitare l'accesso alle connessioni \emph{SSH} per i soggetti
 		non autorizzati.
 
-		In figura \ref{fig:architettura_di_rete} una rappresentazione grafica di quanto illustrato.
+		In figura~\ref{fig:architettura_di_rete} una rappresentazione grafica di quanto illustrato.
 
 	\section{Organizzazione container}\label{organizzazione_container}
 		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
@@ -333,7 +333,7 @@
 		corretto ordine e il riferimento al prodotto. Questo compito e' stato reso piu' difficile da alcuni problemi di
 		formattazione conentuti all'interno del file originale. Come prima azione, lo \emph{script} si occupa di
 		controllare che tutti gli \emph{URL} siano validi e non nulli, dopodiche procede con l'effettivo scaricamento e
-		indicizzazione delle immagini, in figura \ref{fig:script} un'estratto dal sopracitato script.
+		indicizzazione delle immagini, in figura~\ref{fig:script} un'estratto dal sopracitato script.
 
 		\begin{figure}[H]
 			\includegraphics[width=\textwidth]{Script.png}
@@ -375,11 +375,11 @@
 		funzionante e completa, compresa di dati e grossolane misure di sicurezza, da poter poi raffinare fino
 		all'ottenimento del risultato finale.
 
-		Il processo e' partito dalla creazione di una macchina virtuale con le caratteristiche descritte nella sezione
-		\ref{architettura_di_rete}, il gruppo si e' poi cimentato nella gestione degli accessi alla sopracitata
+		Il processo e' partito dalla creazione di una macchina virtuale con le caratteristiche descritte nella
+		sezione~\ref{architettura_di_rete}, il gruppo si e' poi cimentato nella gestione degli accessi alla sopracitata
 		macchina, dapprima tentando un approccio basato sulle organizzazioni e i gruppi offerti nell'ambito della
 		piattaforma \emph{Microsoft Azure}, terminando poi con il piu' intuitivo sistema offerto nativamente dal sistema
-		operativo scelto basato sul protocollo \emph{SSH} descritto nella sezione \ref{SSH}.
+		operativo scelto basato sul protocollo \emph{SSH} descritto nella sezione~\ref{SSH}.
 		Il primo approccio ha presentato diverse difficolta' legate inizialmente all'assegnazione di tutti i componenti
 		del gruppo a una singola untia' organizzativa, seguite poi da difficolta' di assegnazione dei necessari permessi
 		per poter ottenere visibilita' sulla macchina che avrebbe ospitato l'infrastruttura e infine dell'asegnazione di
@@ -387,8 +387,8 @@
 		un primo account con privilegi amministrativi a un membro, il quale ha poi condiviso le credenziali necessarie
 		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato poi
 		possibile impostare profili personali per ognuno dei membri del gruppo, dotando ognuno dei minimi privilegi
-		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}. In figura
-		\ref{fig:utenti_e_gruppi} sono illustrati i gruppi di appartenenza di ciascun utente.
+		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}. In
+		figura~\ref{fig:utenti_e_gruppi} sono illustrati i gruppi di appartenenza di ciascun utente.
 
 		\begin{figure}[H]
 			\includegraphics[width=\textwidth]{UtentiEGruppi.png}
@@ -438,10 +438,9 @@
 		macchina denominata \texttt{prod} dotata di tutte le misure di sicurezza sopracitate nella quale attivare la
 		piattaforma in totale tranquillita', evitando inoltre di \quotes{sporcare} la macchina con esperimenti di sorta,
 		il risultato si e' rivelato molto semplice e pulito, ideale per essere mantenuto al meglio. Come illustrato
-		nell'immagine \ref{fig:architettura_di_rete}, l'accesso da parte degli amministratori di sistema e' stato
+		nell'immagine~\ref{fig:architettura_di_rete}, l'accesso da parte degli amministratori di sistema e' stato
 		mantenuto tramite autenticazione chiave \emph{SSH} per rendere piu' semplice possibile la manutenzione,
 		l'aggiornamento e l'eventuale aggiunta di serivzi.
-
 	\section{Test di sicurezza}\label{test_di_sicurezza}
 		Come ultima fase prima della pubblicazione, e' stato scelto di operare alcuni \quotes{sommari} test di
 		sicurezza, al fine di controllare la solidita' dell'infrastruttura sviluppata.
@@ -453,9 +452,9 @@
 			Come prima azione, e' essenziale la scoperta di quante piu' informazioni possibili in merito al bersaglio,
 			il primo passo in questa direzione e' sicuramente quello dell'utilizzo dello strumento \emph{nmap} al fine
 			di ottenere informazioni sui servizi attivi sul bersaglio ed eventualmente esporne vulnerabilita'.
-			\emph{Nmap}, abbreviazione di \emph{Network Mapper} e' un programma di \emph{network discovery} e
-			\emph{security auditing}, il suo scopo e' analizzare un dato indirizzo per scoprire informazioni sulle porte
-			aperte, sui servizi attivi e su possibili vulnerabilita' relative ad essi.
+			\emph{Nmap}\label{nmap}, abbreviazione di \emph{Network Mapper} e' un programma di \emph{network discovery}
+			e \emph{security auditing}, il suo scopo e' analizzare un dato indirizzo per scoprire informazioni sulle
+			porte aperte, sui servizi attivi e su possibili vulnerabilita' relative ad essi.
 
 			La scansione tramite il sopracitato programma rivela che la macchina analizzata ha le seguenti porte attive:
 			\begin{itemize}
@@ -469,13 +468,12 @@
 			semplice per un \emph{account} utente quale \quotes{nopCommerce}, desumibile dalle informazioni ottenute
 			riguardanti il servizio sulla porta \emph{80}, un attacco a forza bruta basato su una \emph{wordlist} di
 			\emph{password} diffuse avrebbe comunque delle tempistiche molto lunghe, e si rivelerebbe comunque
-			probalilmente infruttuoso.
-			Viene quindi scelto di percorre la strada dell'analisi della piattaforma pubblicata sulla porta \texttt{80}.
-			Tramite il programma di scansione \emph{gobuster} e' possibile ottenere informazioni aggiuntive su cio' che
-			e' pubblicato sulle porte \emph{http e https}, il \emph{software} si occupa di tentare di contattare una
-			serie di pagine collegate al dominio di secondo livello in successione, prendendo i nomi da una lista di
-			pagine comuni. Filtrando poi le pagine che restituiscono una risposta \emph{http} positiva, ossia i seguenti
-			codici:
+			probalilmente infruttuoso.  Viene quindi scelto di percorre la strada dell'analisi della piattaforma
+			pubblicata sulla porta \texttt{80}.  Tramite il programma di scansione \emph{gobuster}\label{gobuster} e'
+			possibile ottenere informazioni aggiuntive su cio' che e' pubblicato sulle porte \emph{http e https}, il
+			\emph{software} si occupa di tentare di contattare una serie di pagine collegate al dominio di secondo
+			livello in successione, prendendo i nomi da una lista di pagine comuni. Filtrando poi le pagine che
+			restituiscono una risposta \emph{http} positiva, ossia i seguenti codici:
 			\begin{itemize}
 				\item \texttt{200}: OK
 				\item \texttt{301}: Moved Permanently
@@ -501,24 +499,23 @@
 				\item \texttt{/cart}
 				\item \texttt{/conditions-of-use}
 			\end{itemize}
-			Aprendo le pagine all'interno di un \emph{browser} possiamo accertarci che siano effettivamente tutte pagine
-			accessibili e valide, non e' pero' presente nessuna pagina \quotes{nascosta} di sorta. L'obbiettivo di
-			questo genere di enumerazione e' quello di scoprire eventuali pagine \quotes{temporanee} utilizzate durante
-			lo sviluppo del sito e poi dimenticate, esse potrebbero contenere informazioni rilevanti o eventuali
+			Aprendo le pagine all'interno di un \emph{browser} e' possibile accertare che siano effettivamente tutte
+			pagine accessibili e valide, non e' pero' presente nessuna pagina \quotes{nascosta} di sorta. L'obbiettivo
+			di questo genere di enumerazione e' quello di scoprire eventuali pagine \quotes{temporanee} utilizzate
+			durante lo sviluppo del sito e poi dimenticate, esse potrebbero contenere informazioni rilevanti o eventuali
 			vulerabilita', sfortunatamente tutte le pagine analizzate sono volutamente accessibili e non contengono
-			informazioni rilevanti. In figura \ref{fig:home_page} tutte le pagine disponibili aperte in un browser.
+			informazioni rilevanti. In figura~\ref{fig:home_page} tutte le pagine disponibili aperte in un browser.
 
 			\begin{figure}[H]
 				\includegraphics[width=\textwidth]{HomePage.png}
 				\caption{Homepage insieme a tutte le altre pagine disponibli.}\label{fig:home_page}
 			\end{figure}
-
-		\section{Analisi server web}
+		\section{Analisi server web}\label{analisi_server_web}
 			Date le poche informazioni a disposizione, il passaggio successivo prevede l'acquisizione di ulteriori dati
 			riguardanti le tecnologie utilizzate dal \emph{server web} del soggeto, questa operazione viene effettuata
-			con l'ausilio del programma \emph{WhatWeb}, richiamato tramite il seguente comando \texttt{whatweb -v
-			\emph{domain or IP}}. Si tratta di un \emph{software} atto all'identificazione del \emph{server web} e delle
-			tecnologie utilizzate in esso.
+			con l'ausilio del programma \emph{WhatWeb}\label{whatweb}, richiamato tramite il seguente comando
+			\texttt{whatweb -v \emph{domain or IP}}. Si tratta di un \emph{software} atto all'identificazione del
+			\emph{server web} e delle tecnologie utilizzate in esso.
 
 			La scansione effettuata con il sopracitato \emph{WhatWeb} mette in luce come il \emph{server web} sia una
 			versione di \emph{Kestrel}, si tratta di un prodotto \emph{Microsoft} atto alla gestione di pagine scritte
@@ -529,6 +526,37 @@
 			spesso usati per la creazione di \emph{account} amministrativi e di test, che potrebbero avere privilegi
 			elevati, o avere le medesime credenziali di \emph{account} all'interno della macchina che contiente la
 			piattaforma.
+		\section{Guesswork e ricerca vulnerabilita'}\label{guesswork_e_ricerca_vulnerabilita}
+			Prima di procedere con tentativi di \emph{login} utilizzando le informazioni ottenute, operazione che
+			potrebbe risultare infruttuosa e dispendiosa in termini di tempo, e' opportuno mettersi alla ricerca di
+			eventuali vulnerabilita' note all'interno delle tecnologie utilizzate dalla piattaforma bersaglio, in
+			particolare \emph{nopCommerce} e il \emph{server web} che ne permette le funzionalita', ossia
+			\emph{Kestrel}. 
+			\subsection{nopCommerce}\label{nopcomerce_2}
+				Il primo passo nella ricerca di vulnerabilita' all'interno di una piattaforma e' l'ottenimento di quanti
+				piu' dati possibili in merito. Dati quali la versione, il momento nel quale e' stata pubblicata per la
+				prima volta e ovviamente le tecnologie impiegate possono rivelarsi fondamentali per trovare falle gia'
+				note, ma delle quali il gestore della piattaforma non e' ancora a conoscenza, o ha comunque deciso di
+				non prendere precauzioni in merito.
+
+				Nel caso della piattaforma \emph{nopCommerce} dell'organizzazione \emph{Cloud Fiesta} non sembra
+				possibile risalire alla versione della piattaforma, l'unica informazione che e' possibile ottenere e'
+				quella dell'anno nel quale e' stata inserita la notifica di \emph{copyright}, all'interno dell sito,
+				assumendo che non sia stata aggiornata da allora, e'possibile dedurne che la piattaforma e' stata
+				pubblicata durante l'anno corrente.
+
+				Sfortunatamente, come indicato dal sito
+				\href{https://www.cvedetails.com/vulnerability-list.php?vendor_id=19803&product_id=0&version_id=0&page=1&hasexp=0&opdos=0&opec=0&opov=0&opcsrf=0&opgpriv=0&opsqli=0&opxss=0&opdirt=0&opmemc=0&ophttprs=0&opbyp=0&opfileinc=0&opginf=0&cvssscoremin=0&cvssscoremax=0&year=0&cweid=0&order=1&trc=7&sha=e467697bc2d0e9c2996500ae46cf86049a8683c2}{cvedetails.com},
+				le piu' recenti falle note all'interno degli \emph{store} creati tramite l'ausilio di \emph{nopCommerce}
+				risalgono ai primi mesi del 2021, se il sito e' effettivamente stato pubblicato durante il 2022 queste
+				falle saranno sicuramente state risolte all'interno dell'ultima versione stabile, rendendo quindi
+				l'\emph{e-commerce} sicuro.
+
+			\subsection{Kestrel}\label{kestrel}
+				Come durante la sezione~\ref{nopcomerce_2}, il primo passo verso l'individuazione di vulnerabilita' e'
+				scoprie quante piu' informazioni possibili in merito all'obbiettivo. Rileggendo gli output ottenuti
+				dall'analisi con gli strumenti \emph{nmap}~\ref{nmap}, \emph{gobuster}~\ref{gobuster} e
+				\emph{whatweb}~\ref{whatweb}, si puo' notare come
 
 \chapter{Penetration testing}\label{penetration_testing}
 	\section{Le premesse}\label{le_premesse}
