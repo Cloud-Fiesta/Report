@@ -252,7 +252,7 @@
 
 	\section{Organizzazione container}\label{organizzazione_container}
 		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
-		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche offre numerosi vantaggi rispetto
+		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche' offre numerosi vantaggi rispetto
 		alla piu' \quotes{classica} architettura basata sull'utlizzo di macchine virtuali dedicate. In particolare, una
 		macchina e' in grado di gestire diversi \emph{container}, ottimizzando al meglio le risorse
 		\emph{hardware} a disposizione. Inoltre, il parziale isolamento di un \emph{container} rispetto alla macchina
@@ -297,7 +297,7 @@
 \chapter{Processo di implementazione}\label{processo_di_implementazione}
 	Per gestire al meglio le tempistiche e la messa a terra del progetto abbiamo strutturato un processo diviso in fasi,
 	esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il carico
-	di lavoro in maniera coerente. In particolare possiamo individuare tre principali fasi, elencate di seguito;
+	di lavoro in maniera coerente. In particolare possiamo individuare cinque principali fasi, elencate di seguito;
 	\begin{enumerate}
 		\item Brainstorming e ricerca
 		\item Prototipazione e scripting
@@ -348,7 +348,7 @@
 		l'utilizzo del \emph{database} ha inizialmente creato alcune difficolta', al fine di condurre test e
 		sperimentazioni e' stato scelto di usare \emph{MySQL} tramite il gruppo di \emph{software} orientato alla
 		programmazione \emph{WEB} \emph{XAMPP}. Si tratta di uno \emph{stack} di \emph{software} comunemente usato
-		all'interno della programmazione \emph{WEB}, l'acronimo simboleggia i \emph{software} conenuti al suo interno,
+		all'interno della programmazione \emph{WEB}, l'acronimo simboleggia i \emph{software} contenuti al suo interno,
 		ossia:
 		\begin{center}
 			\begin{tabular}{c c}
@@ -413,26 +413,40 @@
 		Inoltre, sia tramite l'interfaccia di \emph{Microsoft Azure} sia tramite il \emph{firewall} implementato, sono
 		state definite alcune \emph{policy} atte a limitare l'accesso all'infrastruttura da parte di soggetti non
 		autorizzati. In particolare le \emph{policy} sono state suddivise principalmente in due categorie: quelle legate
-		alle connessioni \emph{SSH}, gestite da \emph{Fail2Ban} e \emph{UFW}; e quelle gestite dalla piattaforma
+		alle connessioni \emph{SSH}, gestite da \emph{Fail2Ban} e \emph{UFW} e quelle gestite dalla piattaforma
 		\emph{Azure}, atte principalmente all'amministrazione delle connessioni verso la macchina virtuale e le sue
 		porte.
 
-		Grazie alla fase di produzione in locale, e' stato possibile definire una serie di passaggi per rendere piu'
-		agile il \emph{deploy} dell'infrastruttura, partendo dall'immagine ufficiale di \emph{nopCommerce} disponibile
-		su \emph{Docker Hub}, e' stato possibile costruirne una personalizzata, contenente direttamente le immagini
-		afferenti ai prodotti presenti all'interno del cataglogo.  La nuova immagine è custodita in repository privato
-		sulla piattaforma \emph{Docker Hub}, funzionale solo al nostro progetto.  Bastera' dunque lanciare il commando
-		\texttt{docker-compose up}, per ottenere in pochi minuti l'intera infrastruttura, attiva e pronta per la
-		produzione.  Questo espediente, insime a due file di configurazione in formato execel, da la possibilita' di
-		mettere in produzione la piattaforma \emph{ e-commerce} in pochi minuti, in maniera totalmente indipedente dal
-		\emph{provider} di servizi \emph{cloud} utilizzato.
+		\subsection{Policy SSH}\label{policy_ssh}
+			Le misure di sicurezza per quando riguarda le connessioni \emph{SSH}, e' stato deciso di limitare al minimo
+			le possibilita' di accesso da parte di soggetti esterni, in particolare sono stati modificati i limiti di
+			tentativi dopo i quali un utente viene temporaneamente inibito dal tentare nuovamente il collegamento,
+			inoltre e' stato aumentato il tempo che intercorrera' tra una serie di tentativi di accesso e la successiva.
+			Queste misure rendono estremamente difficoltoso l'accesso da parte di soggetti non autorizzati.
+			
+			Inoltre, e' stata disabilitata la possibilita' di effettuare un collegamento diretto con gli utenti
+			\texttt{root} e \texttt{nopCommerce}, in questo modo un attaccante dovra' necessariamente compromettere un
+			utente dotato di privilegi elevati per poter ottenere il controllo sulla macchina, o sulla piattaforma di
+			\emph{e-commerce}.
 
-		L'ultima fase della \quotes{sperimentazione} sulla macchina di prova si e' concentrata sull'implementazione del
-		metodo di pagamento. Risultato che e' stato facilmente ottenuto grazie all'integrazione della piattaforma con
-		diversi metodi di pagamento, in particolare, e' stato scelto di utilizzare \emph{PayPal}. Si tratta di un metodo
-		di pagamento sicuro che offre canoni bassi e una relativa facilita' di utlizzo. Per effettuare
-		l'implementazione, e' stato necessario configurare il metodo tramite l'interfaccia grafica dello \emph{store} e
-		collegarlo con un \emph{account} precedentemente creato.
+		\subsection{Deploy agile e provider-less}\label{deploy_agile_e_provider_less}
+			Grazie alla fase di produzione in locale, e' stato possibile definire una serie di passaggi per rendere piu'
+			agile il \emph{deploy} dell'infrastruttura, partendo dall'immagine ufficiale di \emph{nopCommerce}
+			disponibile su \emph{Docker Hub}, e' stato possibile costruirne una personalizzata, contenente direttamente
+			le immagini afferenti ai prodotti presenti all'interno del cataglogo.  La nuova immagine è custodita in
+			repository privato sulla piattaforma \emph{Docker Hub}, funzionale solo al nostro progetto.  Bastera' dunque
+			lanciare il commando \texttt{docker-compose up}, per ottenere in pochi minuti l'intera infrastruttura,
+			attiva e pronta per la produzione.  Questo espediente, insime a due file di configurazione in formato
+			execel, da la possibilita' di mettere in produzione la piattaforma \emph{ e-commerce} in pochi minuti, in
+			maniera totalmente indipedente dal \emph{provider} di servizi \emph{cloud} utilizzato.
+
+		\subsection{Metodo di pagamento}\label{metodo_di_pagamento}
+			L'ultima fase della \quotes{sperimentazione} sulla macchina di prova si e' concentrata sull'implementazione
+			del metodo di pagamento. Risultato che e' stato facilmente ottenuto grazie all'integrazione della
+			piattaforma con diversi metodi di pagamento, in particolare, e' stato scelto di utilizzare \emph{PayPal}. Si
+			tratta di un metodo di pagamento sicuro che offre canoni bassi e una relativa facilita' di utlizzo. Per
+			effettuare l'implementazione, e' stato necessario configurare il metodo tramite l'interfaccia grafica dello
+			\emph{store} e collegarlo con un \emph{account} precedentemente creato.
 
 		In ultimo, grazie ai test e alle prove effettuate sulla macchina di prova, e' stato possibile creare una nuova
 		macchina denominata \texttt{prod} dotata di tutte le misure di sicurezza sopracitate nella quale attivare la
@@ -462,7 +476,7 @@
 				\item 53/tcp: \texttt{domain}
 				\item 80/tcp: \texttt{HTTP}
 			\end{itemize}
-			Nonostatne l'approccio \emph{Black Box}, non sapendo quindi che tipo di autenticazione viene permessa da
+			Nonostante l'approccio \emph{Black Box}, non sapendo quindi che tipo di autenticazione viene permessa da
 			parte del server per quanto riguarda il protocollo \emph{SSH}, tentare di forzare un accesso tramite un
 			attacco \emph{Brute Force} risulterebbe essere solamente una perdita di tempo. Anche assumento un nome
 			semplice per un \emph{account} utente quale \quotes{nopCommerce}, desumibile dalle informazioni ottenute
@@ -592,12 +606,27 @@
 					\item Ubuntu
 					\item ubuntu
 				\end{enumerate}
-				Nell'immagine \ref{fig:cupp} la pagina iniziale di \emph{CUPP}
+				Nell'immagine~\ref{fig:cupp} la pagina iniziale di \emph{CUPP}
 				\begin{figure}[H]
 					\includegraphics[width=\textwidth]{CUPP.png}
 					\caption{Il programma atto alla creazione di \emph{wordlist} personalizzate}\label{fig:cupp}
 				\end{figure}
+				Vengono quindi effettuati alcuni tentativi di intrusione tramite le \emph{password} generate tramite il
+				metodo appena descritto, sfortunatamente pero', non sembra che nessuna delle coppie di credenziali sia
+				corretta. Terminato questo ultimo tentativo si puo' dichiarare l'attivita' di \emph{pentest} nei
+				confronti dell'infrastruttura conclusa, con esito positivo, in quanto non sono stati trovati appigli che
+				possano permettere un intrusione.
+
 \chapter{Penetration testing}\label{penetration_testing}
 	\section{Le premesse}\label{le_premesse}
+		Come per l'attivita' svolta sull'infrastruttura creata e gestita dal gruppo, anche in questo caso il soggetto
+		attaccante si trova a effettuare un \emph{penetration test} in modalita' \emph{Black Box}, in quanto non sono
+		ancora disponibili informazioni di sorta sull'infrastruttura bersaglio. E' inoltre essenziale precisare che
+		anche a fronte di un eventuale ottenimento di un accesso alla o alle macchine che compongono l'infrastruttura
+		designata come obbiettivo, non sara' messa in campo nessuna azione di persistenza, alterazione dei \emph{log} o
+		della piattaforma il generale. L'obbiettivo di questo genere di attivita' e' quello di avere un contributo
+		positivo verso l'azienda committente, mitigando problemi di sicurezza che potrebbero altrimenti portare a
+		conseguenze disastrose, sia dal punto di vista economico che da quello dell'immagine pubblica.
 	\section{Information gathering}\label{information_gathering}
+
 \end{document}

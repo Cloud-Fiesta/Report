@@ -18,13 +18,16 @@
 \BOOKMARK [1][-]{section.4.2}{Prototipazione e scripting}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.3}{Implementazione locale}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.4}{Implementazione remota}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.5}{Test di sicurezza}{chapter.4}% 21
-\BOOKMARK [2][-]{subsection.4.5.1}{Analisi del perimetro}{section.4.5}% 22
-\BOOKMARK [1][-]{section.4.6}{Analisi server web}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.7}{Guesswork e ricerca vulnerabilita'}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.7.1}{nopCommerce}{section.4.7}% 25
-\BOOKMARK [2][-]{subsection.4.7.2}{Kestrel}{section.4.7}% 26
-\BOOKMARK [2][-]{subsection.4.7.3}{Guesswork}{section.4.7}% 27
-\BOOKMARK [0][-]{chapter.5}{Penetration testing}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Le premesse}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.2}{Information gathering}{chapter.5}% 30
+\BOOKMARK [2][-]{subsection.4.4.1}{Policy SSH}{section.4.4}% 21
+\BOOKMARK [2][-]{subsection.4.4.2}{Deploy agile e provider-less}{section.4.4}% 22
+\BOOKMARK [2][-]{subsection.4.4.3}{Metodo di pagamento}{section.4.4}% 23
+\BOOKMARK [1][-]{section.4.5}{Test di sicurezza}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.5.1}{Analisi del perimetro}{section.4.5}% 25
+\BOOKMARK [1][-]{section.4.6}{Analisi server web}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.7}{Guesswork e ricerca vulnerabilita'}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.7.1}{nopCommerce}{section.4.7}% 28
+\BOOKMARK [2][-]{subsection.4.7.2}{Kestrel}{section.4.7}% 29
+\BOOKMARK [2][-]{subsection.4.7.3}{Guesswork}{section.4.7}% 30
+\BOOKMARK [0][-]{chapter.5}{Penetration testing}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Le premesse}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{Information gathering}{chapter.5}% 33
