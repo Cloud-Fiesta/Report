@@ -65,8 +65,8 @@
 		commissionato, coprendo sia l'area di sicurezza e di architettura della rete interna, che quella di utilizzo
 		delle piattaforme cloud che permettono di assicurare la scalabilita' necessaria all'azienda.
 	\section{Il Team}\label{il_team}
-		Gli stutenti di entrambi i corsi sono stati divisi in sei differenti gruppi, composti da un totale di otto persone,
-		il nostro gruppo, denominato \quotes{\emph{Cloud Fiesta}} e' composto dai seguenti studenti:
+		Gli stutenti di entrambi i corsi sono stati divisi in sei differenti gruppi, composti da un totale di otto
+		persone, il nostro gruppo, denominato \quotes{\emph{Cloud Fiesta}} e' composto dai seguenti studenti:
 		\begin{itemize}
 			\item \textbf{Cafasso Giovanni}
 			\item \textbf{Carrieri Riccardo}
@@ -182,7 +182,7 @@
 			e' basata su quanto sviluppato sulla piattaforma \emph{Microsoft Azure} di cui di seguito, al fine di poter
 			mantenere la descrizione il piu' semplice e lineare possibile.
 		\subsection{Microsoft Azure}\label{microsoft_azure}
-			Per descrivere l'architettura ideata riteniamo importante descrivere il \emph{provider} principale sul quale
+			Per descrivere l'architettura ideata e' importante descrivere il \emph{provider} principale sul quale
 			e' stato deciso di fare affidamento. La scelta e' ricaduta sullo strumento \quotes{\emph{Microsoft Azure}}:
 			si tratta di un servizio di \emph{Cloud Computing} offerto da \emph{Microsoft} che, come il resto dei
 			\emph{provider} sul mercato nel medesimo campo, offre servizi di \emph{Infrastructure as a Service},
@@ -194,13 +194,13 @@
 			spendere sulla piattaforma per ogni persona che vi si registri come studente. Cio', in concomitanza con
 			i prezzi in linea con il mercato ha permesso sperimentazioni senza il rischio di dilapidare denaro.
 		\subsection{nopCommerce}\label{nopcommerce}
-			Durante la nostra ricerca di una soluzione che ci permettesse di creare uno \emph{store online} ci siamo
-			imbattuti in \emph{nopCommerce}, una tecnologia a opera di \emph{nopSolutions}. Si tratta di una soluzione
-			\href{https://github.com/nopSolutions/nopCommerce/blob/develop/LICENSE.md}{\emph{libre}} e
-			\emph{open source} che permette la creazione di \emph{store online} mantanendo una discreta
-			semplicita' di utilizzo, nonche una facile integrazione in ogni sistema grazie alla possibilita' di essere
-			installato all'interno di un \emph{contatiner Docker}.
-
+			Durante la nostra ricerca di una soluzione che permettesse la creazione di uno \emph{store online}, e' stato
+			individuato \emph{nopCommerce}, una tecnologia a opera di \emph{nopSolutions}. Si tratta di una soluzione
+			\href{https://github.com/nopSolutions/nopCommerce/blob/develop/LICENSE.md}{\emph{libre}} e \emph{open
+			source} che permette la creazione di \emph{store online} mantanendo una discreta semplicita' di utilizzo,
+			nonche una facile integrazione in ogni sistema grazie alla possibilita' di essere installato all'interno di
+			un \emph{contatiner Docker}.
+			
 			Nato nel 2008, sviluppo e supporto non si sono mai interrotti, l'ampia \emph{community} che lo mantiene
 			e lo sviluppa permette inoltre una facile risoluzione di eventuali problemi grazie all'ampia
 			\href{https://docs.nopcommerce.com/en/developer/index.html?utm\_source=github&utm\_medium=referral&utm\_campaign=documentation&utm\_content=text}{documentazione}
@@ -295,7 +295,7 @@
  
 
 \chapter{Processo di implementazione}\label{processo_di_implementazione}
-	Per gestire al meglio le tempistiche e la messa a terra del progetto abbiamo strutturato un processo diviso in fasi,
+	Per gestire al meglio le tempistiche e la messa a terra del progetto e' sato strutturato un processo diviso in fasi,
 	esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il carico
 	di lavoro in maniera coerente. In particolare possiamo individuare cinque principali fasi, elencate di seguito;
 	\begin{enumerate}
@@ -627,6 +627,42 @@
 		della piattaforma il generale. L'obbiettivo di questo genere di attivita' e' quello di avere un contributo
 		positivo verso l'azienda committente, mitigando problemi di sicurezza che potrebbero altrimenti portare a
 		conseguenze disastrose, sia dal punto di vista economico che da quello dell'immagine pubblica.
+
+		L'indirizzo che identifica il sito bersaglio dell'attivita' e' il seguente:
+
+		\href{https://faultys.francecentral.cloudapp.azure.com/}{https://faultys.francecentral.cloudapp.azure.com/}
 	\section{Information gathering}\label{information_gathering}
+		Come durante la precedente sezione di \quotes{Analisi del perimetro}~\ref{analisi_del_perimetro}, l'pbbiettivo
+		sara' quello di accumulare piu' informazioni possibili sul bersaglio in maniera da poter trovare eventuali
+		appigli per iniziare una qualche genere di procedura di attacco.
+
+		Come prima azione e' stato scelto di lanciare il \emph{software} di analisi perimetrale \emph{Whatweb} gia'
+		citato in precedenza nella sezione~\ref{analisi_server_web}.
+
+		Tramite il comando \quotes{\texttt{whatweb -v -a 3 ip or domain}}
+		vengono ottenute alcune informazioni fondamentali, riassunte qua di seguito:
+		\begin{itemize}
+			\item HttpOnly[PHPSESSID]
+			\item PHP[7.4.27]
+			\item HTML5
+			\item UncommonHeaders[content-security-policy-report-only]
+			\item HTTPServer[Unix][Apache/2.4.52 (Unix) OpenSSL/1.1.1d PHP/7.4.27]
+			\item Script[text/javascript,text/x-magento-init]
+			\item OpenSSL[1.1.1d]
+			\item Magento
+			\item X-Powered-By[PHP/7.4.27]
+			\item X-UA-Compatible[IE=edge]
+			\item X-XSS-Protection[1; mode=block]
+			\item Apache[2.4.52]
+			\item Cookies[PHPSESSID]
+			\item X-Frame-Options[SAMEORIGIN]
+		\end{itemize}
+		Da questo primo risultato si puo' notare come sia un infrastruttura basata su un sistema operativo
+		\emph{GNU/Linux}, la piattaforma utilizzata per sviluppare il sito e' \emph{Magento}, basata su \emph{Apache
+		2.4.52} e \emph{PHP 7.4.27}.
+
+		Segue poi un analisi sfruttando gli altri due programmi usati precedentemente, ossia \emph{nmap} e
+		\emph{gobuster}.
+		I riusltati dell'analisi effettuata da \emph{nmap} 
 
 \end{document}
