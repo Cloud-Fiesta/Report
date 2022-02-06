@@ -659,10 +659,79 @@
 		\end{itemize}
 		Da questo primo risultato si puo' notare come sia un infrastruttura basata su un sistema operativo
 		\emph{GNU/Linux}, la piattaforma utilizzata per sviluppare il sito e' \emph{Magento}, basata su \emph{Apache
-		2.4.52} e \emph{PHP 7.4.27}.
+		2.4.52} e \emph{PHP 7.4.27}. Sfortunatamente, si tratta di versioni considerate \quotes{sicure} dei software in,
+		questione, la ricerca di vulnerabilita' note non ha dato alcun risultato.
 
 		Segue poi un analisi sfruttando gli altri due programmi usati precedentemente, ossia \emph{nmap} e
-		\emph{gobuster}.
-		I riusltati dell'analisi effettuata da \emph{nmap} 
+		\emph{gobuster}.  I riusltati dell'analisi effettuata da \emph{nmap} rivelano che le porte \texttt{22, 53, 80,
+		443, 8443} sono le uniche ad essere aperte sulla macchina obbiettivo.
 
+		Come noto, esse corrispondono ai seguenti servizi:
+		\begin{center}
+			\begin{tabular}{c c}
+				Porta & Servizio \\
+				\midrule
+				22 & \texttt{SSH} \\
+				53 & \texttt{domain} \\
+				80 & \texttt{HTTP} \\
+				443 & \texttt{SSL} \\
+				8443 & \texttt{HTTPS}
+			\end{tabular}
+		\end{center}
+		Come durante l'attivita' di \emph{pentest} nei confronti dell'infrastruttura creata dal gruppo, anche in questo
+		caso non sono presenti servizi esposti immediatamente vulnerabili. Il servizio \emph{SSH} sembra sia difeso da
+		autenticazione tramite chiave, quindi difficilmente penetrabile, mentre le altre porte aperte hanno lo scopo di
+		permettere la connessione tramite protocollo sicuro \emph{HTTPS} all'infrastruttura, non sono quindi di per se
+		un punto di possible approccio.
+
+		Infine, anche l'analisi effettuatata tramite \emph{gobuster}, nonostante l'utilizzo di diverse e ampie
+		\emph{wordlist} atte a coprire un piu' ampio spettro di casistiche, ha fornito risultati, tutte le pagine
+		identificati dall'applicazione sono pagine effettivamente relative alla piattaforma analizzata e accessibili
+		tramite l'interfaccia del sito. Non sono presenti pagine legate alla fase di sviluppo o di \emph{test}
+		dell'infrastruttura che avrebbero potuto permettere una vulnerabilita' all'interno dell'intero sistema.
+
+		Infine, e' stata tentata la strada degli attacchi di tipologia \emph{SQL Injection}, questa categoria di
+		attacchi si basa sull'insermento di una stringa in linguaggio \emph{SQL} in maniera da interrompere la normale
+		esecuzione della chiamata da parte del'interfaccia \emph{web} al \emph{database} e riscriverla in parte con
+		codice arbitrario. La lista di \emph{payload} provati e' quella fornita dal comodo \emph{plugin} sviluppato per
+		il \emph{browser Firefox} \quotes{Hack-Tools}. Esso contiene una lista di possibili \emph{payload} in grado di
+		poter potenzialmente funzionare su diversi tipi di implementazioni del linguaggio \emph{SQL}. Anche in questo
+		caso pero', la piattaforma testata ha risposto in maniera eccellente ai tentativi, considerando tutti i
+		cinquantotto \emph{payload} come stringhe non valide e bloccando quindi il tentativo sul nascere.
+
+		Dopo questo ultimo tentativo, si puo' dichiarare l'attivita' di \emph{Penetration Testing} conclusa e
+		l'infrastruttura dell'azienda \emph{Faulty System} sicura.
+
+\chapter{Considerazioni finali sul progetto a opera dei membri del gruppo}
+	\section{title}
+	\author{Riccardo De Lazzari}
+
+	Sum Text
+	\section{title}
+	\author{Lorenzo Dellera}
+
+	Sum Text
+	\section{Esperienza formativa di grande spessore}
+	\author{Riccardo Oglietti}
+
+	A conclusione di questa esperienza, non posso che esprimere un giudizio estremamente positivo sull'attivita' appena 
+	terminata, la possibilita' di coordinare un \emph{team} di professionalita' ed esperienze cosi eterogenee e'
+	sicuramente stata incredibilmente formativa. Inoltre le sfide tecniche che abbiamo superato mi hanno permesso di
+	crescere in maniera non indifferente dal punto di vista professionale, non posso che ringraziare per questa
+	entusiasmante esperienza i professori che l'hanno coordinata \emph{Andrea Blanchietti} e \emph{Entrico Zimuel}.
+	Infine mi permetto di spendere alcune parole verso il mio \emph{team}, che si e' impegnato
+	al massimo e con passione durante tutta la durata del progetto, in particolare verso \emph{Giovanni Cafasso}, il cui
+	contributo e' stato di fondamentale importanza e il suo impegno ha ecceduto le mie piu' rosee aspettative.
+	\section{title}
+	\author{Giovanni Cafasso}
+
+	Sum Text
+	\section{title}
+	\author{Riccardo Carrieri}
+
+	Sum Text
+	\section{title}
+	\author{Alessio Murta}
+
+	Sum Text
 \end{document}
