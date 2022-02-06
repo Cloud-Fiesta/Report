@@ -49,7 +49,7 @@
 		si occupa di commercio al dettaglio, il sistema deve essere \emph{scalabile} in maniera da poter limitare i
 		costi a quanto strettamente necessrio e potersi mantenere aderente con le esigenze di crescita aziendale.
 		Inoltre, e' essenziale che la piattaforma possa avere degli \emph{standard di sicurezza elevati}, come ben
-		sappiamo, durante i recenti anni si e' verificata un impennata dei crimini legati alla \textit{Cybersecurity},
+		sappiamo, durante i recenti anni si e' verificata un'impennata dei crimini legati alla \textit{Cybersecurity},
 		con un particolare aumento durante la corrente pandemia da COVID-19, come illustrato
 		\href{https://www.interpol.int/en/News-and-Events/News/2020/INTERPOL-report-shows-alarming-rate-of-cyberattacks-during-COVID-19}{dall'Interpol}.
 		E' quindi fondamentale che un'applicazione che gestisce flussi di denaro sia quindi estremamente solida dal
@@ -98,8 +98,8 @@
 	\section{GANTT e cronoprogramma}\label{gantt_e_cronoprogramma}
 		Innanzitutto parlando di strumenti tecnico-organizzativi non e' possibile iniziare senza descrivere il
 		\emph{GANTT}.  Strumento principe per l'organizzazione delle tempistiche, si tratta di una tabella a doppia
-		entrata che permette di assegnare alcuni \emph{task} ritenuti fondamentali a un membro e un momento nel quale
-		realizzarlo.
+		entrata che permette di assegnare alcuni \emph{task} ritenuti fondamentali e il momento in cui realizzarli a
+		ciascun componente del team.
 
 		Ecco una lista riassuntiva dei processi e degli \emph{step} fondamentali che abbiamo individuato al fine della
 		realizzazione ottimale del progetto, divisi in base al corso di afferenza dei destinatari:
@@ -131,7 +131,7 @@
 	\section{Strumenti di comunicazione}\label{strumenti di comunicazione}
 		Durante il primo incontro uno dei principali punti che e' stato chiarito e' quello della \emph{comunicazione}.
 		E' infatti essenziale che in un gruppo di lavoro sia possibile gestire la comunicazione in maniera piu'
-		efficente e inclusiva possibile, senza quindi escludere membri o affidarsi a piattaforme troppo lente o non
+		efficente e inclusiva possibile, senza quindi escludere componenti o affidarsi a piattaforme troppo lente o non
 		organizzate.
 		
 		La scelta e' quindi ricaduta sulla piattaforma di messaggistica istantanea \emph{Telegram}, grazie alla
@@ -143,9 +143,9 @@
 		Data la forte componente di scrittura software presente all'interno del progetto, si e' propenso per l'utlizzo
 		di una piattaforma di sviluppo collaborativo, in maniera da organizzare la stesura del codice nella maniera piu'
 		semplice ed esaustiva possibile. In particolare ci siamo affidati al software \emph{GIT} a opera di \emph{Linus
-		Torvalds}, creando un organizzazione sulla popolare piattaforma di proprieta' \emph{Microsoft}, \emph{GitHub}.
+		Torvalds}, creando un'organizzazione sulla popolare piattaforma di proprieta' \emph{Microsoft}, \emph{GitHub}.
 
-		Sulla piattaforma ci siamo quindi premurati di creare immediatamente tre \emph{repository} atti a contenere il
+		Sulla piattaforma ci siamo quindi premurati di creare immediatamente tre \emph{repository} atte a contenere il
 		lavoro prodotto dal gruppo, in particolare essi sono:
 		\begin{enumerate}
 			\item \texttt{Random\_Script}\label{item:Script}
@@ -153,13 +153,14 @@
 			\item \texttt{Report\_Economy}\label{item:ReportE}
 		\end{enumerate}
 
-		Il repository numero~\ref{item:Script}{, \emph{Random\_Script}} e' atto al contenimento di una serie di
-		programmi di piccola entita', come il \emph{parser} che si e' occupato di scaricare le immagini dei prodotti da
-		aggiungere successivamente al database dello store, o il \emph{docker-compose.yml} che servira' per effettuare l'operazione di \emph{deploy} sull'infrastruttura in ambiente di produzione.
+		Il repository numero~\ref{item:Script}{, \emph{Random\_Script}} e' adatto a contenere programmi di piccola
+		entita', come il \emph{parser} che si e' occupato di scaricare le immagini dei prodotti da aggiungere
+		successivamente al database dello store, o il \emph{docker-compose.yml} che servira' per effettuare l'operazione
+		di \emph{deploy} sull'infrastruttura in ambiente di produzione.
 
-		Per quanto riguarda \emph{Report}, ossia il numero~\ref{item:Report}, si tratta dello spazio atto alla creazione
-		del report finale, esso e' stato redatto tramite l'utilizzo del linguaggio \LaTeX{}, argomento che sara'
-		affrontato in dettaglio in seguito.
+		Per quanto riguarda \emph{Report}, ossia il numero~\ref{item:Report}, si tratta dello spazio designato alla
+		creazione del report finale, esso e' stato redatto tramite l'utilizzo del linguaggio \LaTeX{}, argomento che
+		sara' affrontato in dettaglio in seguito.
 
 		Infine, il \emph{repository}~\ref{item:ReportE}, nominato come \emph{Report\_Economy}, e' atto ad accogliere i
 		documenti e gli appunti che permetteranno la stesura di un preventivo attendibile dell'implementazione, come
@@ -192,13 +193,13 @@
 			gestire.
 			Inoltre, come molti dei suoi piu' diretti concorrenti, \emph{Microsoft} offre un bonus gratuito di \$100 da
 			spendere sulla piattaforma per ogni persona che vi si registri come studente. Cio', in concomitanza con
-			i prezzi in linea con il mercato ha permesso sperimentazioni senza il rischio di dilapidare denaro.
+			i prezzi in linea con il mercato ha permesso sperimentazioni senza la necessita' di spendere denaro.
 		\subsection{nopCommerce}\label{nopcommerce}
 			Durante la nostra ricerca di una soluzione che permettesse la creazione di uno \emph{store online}, e' stato
 			individuato \emph{nopCommerce}, una tecnologia a opera di \emph{nopSolutions}. Si tratta di una soluzione
 			\href{https://github.com/nopSolutions/nopCommerce/blob/develop/LICENSE.md}{\emph{libre}} e \emph{open
 			source} che permette la creazione di \emph{store online} mantanendo una discreta semplicita' di utilizzo,
-			nonche una facile integrazione in ogni sistema grazie alla possibilita' di essere installato all'interno di
+			nonche' una facile integrazione in ogni sistema grazie alla possibilita' di essere installato all'interno di
 			un \emph{contatiner Docker}.
 			
 			Nato nel 2008, sviluppo e supporto non si sono mai interrotti, l'ampia \emph{community} che lo mantiene
@@ -244,7 +245,7 @@
 		atto a limitare le connessioni non autorizzate verso la macchina per il quale e' configurato. In particolare,
 		questo firewall e' in realta' un \emph{frontend} semplificato per \emph{IP Tables}, probabilmente il piu'
 		utilizzato firewall in ambiente \emph{GNU/Linux}.
-		Anche \emph{Fail2Ban} si occupa di una funzione simile, in quanto la sua funzione prinicpale all'interno dell'
+		Anche \emph{Fail2Ban} si occupa di una funzione simile, in quanto la sua funzione principale all'interno dell'
 		architettura proposta e' quella di regolamentare e limitare l'accesso alle connessioni \emph{SSH} per i soggetti
 		non autorizzati.
 
@@ -295,9 +296,10 @@
  
 
 \chapter{Processo di implementazione}\label{processo_di_implementazione}
-	Per gestire al meglio le tempistiche e la messa a terra del progetto e' sato strutturato un processo diviso in fasi,
-	esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il carico
-	di lavoro in maniera coerente. In particolare possiamo individuare cinque principali fasi, elencate di seguito;
+	Per gestire al meglio le tempistiche e la messa a terra del progetto e' stato strutturato un processo diviso in
+	fasi, esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il
+	carico di lavoro in maniera coerente. In particolare possiamo individuare cinque principali fasi, elencate di
+	seguito;
 	\begin{enumerate}
 		\item Brainstorming e ricerca
 		\item Prototipazione e scripting
@@ -310,16 +312,16 @@
 	\section{Brainstorming e ricerca}\label{brainstorming_e_ricerca}
 		Durante la prima parte del progetto, il gruppo si e' dedicato all'individuazione degli strumenti precedentemente
 		citati atti all'implementazione di quanto richiesto. Questo iniziale sforzo e' stato portato avanti
-		contemporanemente da tutti i membri del gruppo, mentre i membri afferenti al corso di \emph{Cloud Specialist} si
-		sono occupati di effettuare le necessarie ricerce per quanto riguarda il provider di servizi, i membri di
-		\emph{ICT Security Specialist} si sono occupati di iniziare a definire acluni strumenti atti alla gestione della
-		rete.
+		contemporanemente da tutti i componenti del gruppo, mentre i colleghi afferenti al corso di \emph{Cloud
+		Specialist} si sono occupati di effettuare le necessarie ricerce per quanto riguarda il provider di servizi, i
+		componenti di \emph{ICT Security Specialist} si sono occupati di definire acluni strumenti atti alla
+		gestione della rete.
 		Durante questa fase iniziale, sono stati inoltre individuati lo strumento atto alla creazione dello \emph{store
 		online}, la relativa gesione del \emph{database} e tutti gli strumenti di comunicazione, organizzazione e
 		videoscrittura.
 	\section{Prototipazione e scripting}\label{prototipazione_e_scripting}
-		La fase successiva si e' rivalta essere molto piu' pratica di quella appena svolta, in quanto il gruppo si e'
-		trovato a dover iniziare a risolvere alcuni problemi pratici, come il \emph{parsing} del file \emph{csv}
+		La fase successiva si e' rivelata essere molto piu' pratica di quella appena svolta, in quanto il gruppo si e'
+		trovato a dover risolvere alcuni problemi pratici, come il \emph{parsing} del file \emph{csv}
 		contenente i dati atti a popolare il \emph{database} e l'utilizzo di \emph{nopCommerce}.
 
 		La necessita' di agire sul file originale contenente i dati iniziali per popolare il \emph{database} e' nata
@@ -368,10 +370,10 @@
 		Il problema e' stato finalmente risolto tramite l'esportazione della tabella \emph{products} tramite
 		l'interfaccia alla piattaforma per comprenderne al meglio la struttura, e poter di conseguenza strutturare il
 		file \emph{CSV} in maniera consona.
-		Una volta utlimata un implementazione completamente funzionante della piattaforma di \emph{e-commerce}
+		Una volta utlimata un'implementazione completamente funzionante della piattaforma di \emph{e-commerce}
 		localmente, e' iniziata la sperimentazione remota, descritta in maniera piu' completa di seguito.
 	 \section{Implementazione remota}\label{implementazione_remota}
-		Durante la fase di implementazione remota, lo scopo del gruppo e' stato quello di ottenere un infrastruttura
+		Durante la fase di implementazione remota, lo scopo del gruppo e' stato quello di ottenere un'infrastruttura
 		funzionante e completa, compresa di dati e grossolane misure di sicurezza, da poter poi raffinare fino
 		all'ottenimento del risultato finale.
 
@@ -383,11 +385,11 @@
 		Il primo approccio ha presentato diverse difficolta' legate inizialmente all'assegnazione di tutti i componenti
 		del gruppo a una singola untia' organizzativa, seguite poi da difficolta' di assegnazione dei necessari permessi
 		per poter ottenere visibilita' sulla macchina che avrebbe ospitato l'infrastruttura e infine dell'asegnazione di
-		chiavi di accesso univoche a tutti i membri. E' stato quindi scelto di lasciare la creazione della macchina e di
-		un primo account con privilegi amministrativi a un membro, il quale ha poi condiviso le credenziali necessarie
-		alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e' stato poi
-		possibile impostare profili personali per ognuno dei membri del gruppo, dotando ognuno dei minimi privilegi
-		necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}. In
+		chiavi di accesso univoche a tutti i componenti. E' stato quindi scelto di lasciare la creazione della macchina
+		e di un primo account con privilegi amministrativi a un soggetto, il quale ha poi condiviso le credenziali
+		necessarie alla connessione remota tramite comunicazione criptata. Da questo primo account amministrativo e'
+		stato poi possibile impostare profili personali per ognuno dei componenti del gruppo, dotando ognuno dei minimi
+		privilegi necessari allo svolgimento della sua funzione secondo il principio \quotes{\emph{Least Privilege}}. In
 		figura~\ref{fig:utenti_e_gruppi} sono illustrati i gruppi di appartenenza di ciascun utente.
 
 		\begin{figure}[H]
@@ -396,8 +398,8 @@
 		\end{figure}
 
 		Ognuno dei profili utente creati e' dotato di una coppia di chiavi \emph{RSA} generata tramite il comando
-		\texttt{ssh-keygen -b 4048}, che, in congiunzione con le coppie di chiavi delle macchine dei rispettivi membri
-		del gruppo ha permesso di impostare un accesso ai profili utenti tramite chiave univoca. 
+		\texttt{ssh-keygen -b 4048}, che, in congiunzione con le coppie di chiavi delle macchine dei rispettivi
+		componenti del gruppo ha permesso di impostare un accesso ai profili utenti tramite chiave univoca. 
 		Grazie a questi scambi di chiavi, e' stato succcessivamente possibile disabilitare l'accesso via \emph{password}
 		a tutti gli utenti, rinforzando notevolmente la sicurezza della macchina e dell'infrastruttura. E' poi stato
 		creato un utente denominato \emph{nopCommerce} abilitato ad utilizzare solamente i comandi indispensabili alla
@@ -436,8 +438,8 @@
 			le immagini afferenti ai prodotti presenti all'interno del cataglogo.  La nuova immagine è custodita in
 			repository privato sulla piattaforma \emph{Docker Hub}, funzionale solo al nostro progetto.  Bastera' dunque
 			lanciare il commando \texttt{docker-compose up}, per ottenere in pochi minuti l'intera infrastruttura,
-			attiva e pronta per la produzione.  Questo espediente, insime a due file di configurazione in formato
-			execel, da la possibilita' di mettere in produzione la piattaforma \emph{ e-commerce} in pochi minuti, in
+			attiva e pronta per la produzione.  Questo espediente, insieme a due file di configurazione in formato
+			execel, da' la possibilita' di mettere in produzione la piattaforma \emph{ e-commerce} in pochi minuti, in
 			maniera totalmente indipedente dal \emph{provider} di servizi \emph{cloud} utilizzato.
 
 		\subsection{Metodo di pagamento}\label{metodo_di_pagamento}
@@ -533,7 +535,7 @@
 
 			La scansione effettuata con il sopracitato \emph{WhatWeb} mette in luce come il \emph{server web} sia una
 			versione di \emph{Kestrel}, si tratta di un prodotto \emph{Microsoft} atto alla gestione di pagine scritte
-			principalmente in \emph{ASP.NET} e derivati. Un altra informazione ottenuta riguarda il nome
+			principalmente in \emph{ASP.NET} e derivati. Un'altra informazione ottenuta riguarda il nome
 			dell'organizzazione proprietaria della piattaforma, ossia \emph{\quotes{Cloud Fiesta}}, informazione che
 			potrebbe risultare utile nel caso si ottenga la possibilita' di effettuare un \emph{login} sulla piattaforma
 			come amministratore, nomi comuni e in forte relazione con il contenuto delle pagine di riferimento sono
@@ -548,10 +550,10 @@
 			\emph{Kestrel}. 
 			\subsection{nopCommerce}\label{nopcomerce_2}
 				Il primo passo nella ricerca di vulnerabilita' all'interno di una piattaforma e' l'ottenimento di quanti
-				piu' dati possibili in merito. Dati quali la versione, il momento nel quale e' stata pubblicata per la
-				prima volta e ovviamente le tecnologie impiegate possono rivelarsi fondamentali per trovare falle gia'
-				note, ma delle quali il gestore della piattaforma non e' ancora a conoscenza, o ha comunque deciso di
-				non prendere precauzioni in merito.
+				piu' dati possibili. La versione, il momento nel quale e' stata pubblicata per la prima volta e
+				ovviamente le tecnologie impiegate, queste informazioni possono rivelarsi fondamentali per trovare falle
+				gia' note, ma delle quali il gestore della piattaforma non e' ancora a conoscenza o ha comunque deciso
+				di non prendere precauzioni in merito.
 
 				Nel caso della piattaforma \emph{nopCommerce} dell'organizzazione \emph{Cloud Fiesta} non sembra
 				possibile risalire alla versione della piattaforma, l'unica informazione che e' possibile ottenere e'
@@ -590,7 +592,7 @@
 				\begin{itemize}
 					\item La piattaforma sia basata su \emph{nopCommerce}, a sua volta basato su \emph{Kestrel}.
 					\item L'organizzazione e' chiamata \href{https://github.com/Cloud-Fiesta}{\emph{Cloud Fiesta}}
-					\item L'unico membro pubblico dell'organizzazione su \emph{GitHub} e' denominato \href{https://github.com/ErreKappa1}{ErreKappa1}
+					\item L'unico componente pubblico dell'organizzazione su \emph{GitHub} e' denominato \href{https://github.com/ErreKappa1}{ErreKappa1}
 				\end{itemize}
 				Tramite queste informazioni, e grazie ad un software atto alla creazione di una lista di \emph{password}
 				basandosi su informazioni dell'organizzazione e delle persone coivolte denominato \emph{cupp}, e' ora
@@ -632,7 +634,7 @@
 
 		\href{https://faultys.francecentral.cloudapp.azure.com/}{https://faultys.francecentral.cloudapp.azure.com/}
 	\section{Information gathering}\label{information_gathering}
-		Come durante la precedente sezione di \quotes{Analisi del perimetro}~\ref{analisi_del_perimetro}, l'pbbiettivo
+		Come durante la precedente sezione di \quotes{Analisi del perimetro}~\ref{analisi_del_perimetro}, l'obbiettivo
 		sara' quello di accumulare piu' informazioni possibili sul bersaglio in maniera da poter trovare eventuali
 		appigli per iniziare una qualche genere di procedura di attacco.
 
@@ -662,8 +664,8 @@
 		2.4.52} e \emph{PHP 7.4.27}. Sfortunatamente, si tratta di versioni considerate \quotes{sicure} dei software in,
 		questione, la ricerca di vulnerabilita' note non ha dato alcun risultato.
 
-		Segue poi un analisi sfruttando gli altri due programmi usati precedentemente, ossia \emph{nmap} e
-		\emph{gobuster}.  I riusltati dell'analisi effettuata da \emph{nmap} rivelano che le porte \texttt{22, 53, 80,
+		Segue poi un'analisi sfruttando gli altri due programmi usati precedentemente, ossia \emph{nmap} e
+		\emph{gobuster}. I risultati dell'analisi effettuata da \emph{nmap} rivelano che le porte \texttt{22, 53, 80,
 		443, 8443} sono le uniche ad essere aperte sulla macchina obbiettivo.
 
 		Come noto, esse corrispondono ai seguenti servizi:
@@ -702,15 +704,15 @@
 		Dopo questo ultimo tentativo, si puo' dichiarare l'attivita' di \emph{Penetration Testing} conclusa e
 		l'infrastruttura dell'azienda \emph{Faulty System} sicura.
 
-\chapter{Considerazioni finali sul progetto a opera dei membri del gruppo}
+\chapter{Considerazioni finali sul progetto a opera dei componenti del gruppo}
 	\section{title}
 	\author{Riccardo De Lazzari}
 
 	Sum Text
-	\section{title}
+	\section{Impressioni progetto}
 	\author{Lorenzo Dellera}
 
-	Sum Text
+	Il mio giudizio su questa esperienza è stata estremamente positiva in quanto ho potuto interfacciarmi con alcuni argomenti che non sono stati affrontati (o sono stati affrontati in modo non approfondito) durante il mio corso. Mi sono trovato molto bene con il team che mi è stato assegnato, in particolare con i ragazzi di cloud con cui mi sono trovato da subito in sintonia ed ho potuto lavorare avendo sempre un punto di vista diverso rispetto a quello a cui sono abituato.
 	\section{Esperienza formativa di grande spessore}
 	\author{Riccardo Oglietti}
 
@@ -728,10 +730,10 @@
 	Al termine di questa unità formativa posso ritenermi soddisfatto del traguardo raggiunto da me e dal mio gruppo.
 	Sono molto contento di aver collaborato con alcuni miei compagni e alcuni ragazzi del corso di ICT Cyber Security: ognuno ha partecipato in modo significativo al progetto ed è stato fatto un bel lavoro di squadra.
 	Personalmente, questo laboratorio, mi ha aiutato ad entrare nell'ottica di lavorare in team con qualifiche diverse dalla mia e sono contento di aver potuto mettere mano ad alcuni servizi offerti dal cloud provider Azure.
-	\section{title}
+	\section{Ottimo progetto formativo}
 	\author{Riccardo Carrieri}
 
-	Sum Text
+	Ho trovato il progetto molto stimolante e utile, mi ha permesso di metter in pratica le abilità sia tecniche che comunicative apprese durante l'anno passato, ottima é stata anche la comunicazione con tutti i membri del team, sempre molto disponibili ed efficienti, mi ritengo quindi contento e pienamente soddisfatto del risultato raggiunto alla fine del progetto
 	\section{title}
 	\author{Alessio Murta}
 
