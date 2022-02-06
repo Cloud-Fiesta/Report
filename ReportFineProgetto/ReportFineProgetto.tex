@@ -177,10 +177,10 @@
 		\subsection{Provider servizi cloud}\label{provider_servizi_cloud}
 			Parlando di \emph{provider} di servizi \emph{cloud}, e' doveroso premettere come l'infrastruttura e' stata
 			concepita allo scopo di essere completamente indipendente da un particolare marchio o servizio esterno. Essa
-			e' stata pensata in maniera da essere facilmente implementata su una varita' di fornitori di servizi
+			e' stata pensata in maniera da essere agilmente implementata su una varita' di fornitori di servizi
 			\emph{cloud} differenti, in maniera da poter agilmente scegliere quello piu' conveniente per l'azienda
 			committente in maniera indipendente dalla piattaforma. Fatto salvo cio', l'intera descrizione del progetto
-			e' basata su quanto sviluppato sulla piattaforma \emph{Microsoft Azure} di cui di seguito, al fine di poter
+			e' basata su quanto sviluppato sulla piattaforma \emph{Microsoft Azure} di cui a seguito, al fine di poter
 			mantenere la descrizione il piu' semplice e lineare possibile.
 		\subsection{Microsoft Azure}\label{microsoft_azure}
 			Per descrivere l'architettura ideata e' importante descrivere il \emph{provider} principale sul quale
@@ -228,7 +228,7 @@
 
 		Al suo interno sono poi presenti alcuni elementi aggiuntivi, che compongono la vera e propria infrastruttura.
 
-		Innanzitutto e' presente \emph{Docker}, si tratta del \emph{runtime} piu' diffuso per \emph{container} diffuso
+		Innanzitutto e' presente \emph{Docker}, si tratta del \emph{runtime} per \emph{container} diffuso
 		sul mercato. I \emph{container} sono \quotes{entita'} che al loro interno contengono un ambiente minimale con
 		tutte le componenti necessarie a un applicativo per svolgere il suo funzionamento, comprese tutte le dipendenze
 		di ognuna delle sue parti. Questa entita' si interfaccia poi con il \emph{Docker Engine}, un software che si
@@ -252,18 +252,18 @@
 		In figura~\ref{fig:architettura_di_rete} una rappresentazione grafica di quanto illustrato.
 
 	\section{Organizzazione container}\label{organizzazione_container}
-		Come accennato durante il precedente paragrafo, la nostra architettura e' organizzata tramite l'utilizzo di
-		\emph{container}. Questa metodologia di  \emph{deploy} e' stata scelta perche' offre numerosi vantaggi rispetto
-		alla piu' \quotes{classica} architettura basata sull'utlizzo di macchine virtuali dedicate. In particolare, una
-		macchina e' in grado di gestire diversi \emph{container}, ottimizzando al meglio le risorse
-		\emph{hardware} a disposizione. Inoltre, il parziale isolamento di un \emph{container} rispetto alla macchina
-		\emph{host} rende l'infrastruttura piu' sicura, in quanto compromettere un singolo applicativo non mette a
-		rischio il resto dell'infrastruttura o degli altri servizi che condividono le medesime risorse.
-		Infine e' importante sottolineare che, grazie all'utilizzo di \emph{Docker Compose},uno strumento per la 
-		definizione e l'esecuzione di applicazioni \emph{Docker} multi-contenitore, possiamo utilizzare un singolo comando per
-		creare e avviare tutti i container definiti nel file yaml. Non solo, ci permette di definire e collegare in una
-		rete logica i \emph{container}, che interagiranno tra loro come fosserò macchine fisiche.
-		Per implementare la nostra infrastruttura, abbiamo deciso di utilizzare i seguenti \emph{container}:
+		Come accennato precedentemente, la nostra architettura e' organizzata tramite l'utilizzo di \emph{container}.
+		Questa metodologia di  \emph{deploy} e' stata scelta perche' offre numerosi vantaggi rispetto alla piu'
+		\quotes{classica} architettura basata sull'utlizzo di macchine virtuali dedicate. In particolare, una macchina
+		e' in grado di gestire diversi \emph{container}, ottimizzando al meglio le risorse \emph{hardware} a
+		disposizione. Inoltre, il parziale isolamento di un \emph{container} rispetto alla macchina \emph{host} rende
+		l'infrastruttura piu' sicura, in quanto compromettere un singolo applicativo non mette a rischio il resto
+		dell'infrastruttura o degli altri servizi che condividono le medesime risorse.  Infine e' importante
+		sottolineare che, grazie all'utilizzo di \emph{Docker Compose},uno strumento per la definizione e l'esecuzione
+		di applicazioni \emph{Docker} multi-contenitore, possiamo utilizzare un singolo comando per creare e avviare
+		tutti i container definiti nel file \emph{yaml}. Non solo, permette di definire e collegare in una rete logica i
+		\emph{container}, che interagiranno tra loro come fosserò macchine fisiche.  Per implementare la nostra
+		infrastruttura, abbiamo deciso di utilizzare i seguenti \emph{container}:
 		\begin{itemize}
 			\item nopCommerce
 			\item MySQL
@@ -286,7 +286,7 @@
 
 		I \emph{container} sono configurati in maneira da utilizzare due porte per la comunicazione: la porta
 		\texttt{80} e la porta \texttt{3306}. Rispettivamente usate per permettere al \emph{container} contenente
-		\emph{nopCommerce} di essere esposto verso internet, e sempre al medesimo di effettuare le comunicazioni con il
+		\emph{nopCommerce} di essere esposto verso internet, e di effettuare le comunicazioni con il
 		database \emph{MySQL}.
 
 		\begin{figure}[H]
@@ -297,9 +297,9 @@
 
 \chapter{Processo di implementazione}\label{processo_di_implementazione}
 	Per gestire al meglio le tempistiche e la messa a terra del progetto e' stato strutturato un processo diviso in
-	fasi, esse ci hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il
-	carico di lavoro in maniera coerente. In particolare possiamo individuare cinque principali fasi, elencate di
-	seguito;
+	fasi, esse hanno permesso di poter controllare lo stato di avanzamento dei lavori e modificare i programmi e il
+	carico di lavoro in maniera coerente. In particolare e' stato scelto di effettuare un divisione in  cinque
+	principali fasi, elencate di seguito;
 	\begin{enumerate}
 		\item Brainstorming e ricerca
 		\item Prototipazione e scripting
@@ -311,10 +311,10 @@
 	presentata una breve sintesi di quanto accaduto in ognuna di esse.
 	\section{Brainstorming e ricerca}\label{brainstorming_e_ricerca}
 		Durante la prima parte del progetto, il gruppo si e' dedicato all'individuazione degli strumenti precedentemente
-		citati atti all'implementazione di quanto richiesto. Questo iniziale sforzo e' stato portato avanti
+		citati atti all'implementazione di quanto richiesto. Questo iniziale impegno e' stato portato avanti
 		contemporanemente da tutti i componenti del gruppo, mentre i colleghi afferenti al corso di \emph{Cloud
 		Specialist} si sono occupati di effettuare le necessarie ricerce per quanto riguarda il provider di servizi, i
-		componenti di \emph{ICT Security Specialist} si sono occupati di definire acluni strumenti atti alla
+		componenti di \emph{ICT Security Specialist} hanno provveduto a definire acluni strumenti atti alla
 		gestione della rete.
 		Durante questa fase iniziale, sono stati inoltre individuati lo strumento atto alla creazione dello \emph{store
 		online}, la relativa gesione del \emph{database} e tutti gli strumenti di comunicazione, organizzazione e
@@ -367,7 +367,7 @@
 		scelta.
 		Prima di giungere a questa soluzione, sono state riscontrate diverse anomalie, per esempio l'impossibilita' di
 		visualizzare i prodotti ottenuti, o di aggiungerli al \quotes{carrello} per terminare l'acquisto.
-		Il problema e' stato finalmente risolto tramite l'esportazione della tabella \emph{products} tramite
+		Il problema e' stato infine risolto tramite l'esportazione della tabella \emph{products} tramite
 		l'interfaccia alla piattaforma per comprenderne al meglio la struttura, e poter di conseguenza strutturare il
 		file \emph{CSV} in maniera consona.
 		Una volta utlimata un'implementazione completamente funzionante della piattaforma di \emph{e-commerce}
@@ -422,9 +422,10 @@
 		\subsection{Policy SSH}\label{policy_ssh}
 			Le misure di sicurezza per quando riguarda le connessioni \emph{SSH}, e' stato deciso di limitare al minimo
 			le possibilita' di accesso da parte di soggetti esterni, in particolare sono stati modificati i limiti di
-			tentativi dopo i quali un utente viene temporaneamente inibito dal tentare nuovamente il collegamento,
-			inoltre e' stato aumentato il tempo che intercorrera' tra una serie di tentativi di accesso e la successiva.
-			Queste misure rendono estremamente difficoltoso l'accesso da parte di soggetti non autorizzati.
+			tentativi dopo i quali un utente viene temporaneamente inibito dal tentare nuovamente il collegamento, e il
+			massimo numero possibile degli stessi, inoltre e' stato aumentato il tempo che intercorrera' tra una serie
+			di tentativi di accesso e la successiva.  Queste misure rendono estremamente difficoltoso l'accesso da parte
+			di soggetti non autorizzati.
 			
 			Inoltre, e' stata disabilitata la possibilita' di effettuare un collegamento diretto con gli utenti
 			\texttt{root} e \texttt{nopCommerce}, in questo modo un attaccante dovra' necessariamente compromettere un
